@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cinzel", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Luxurious Titan Royal Sapphire & Pristine Obsidian Eyes-Friendly Palette */
+  --color-neutral-50: #ffffff;    /* Pure White (high-contrast text highlights) */
+  --color-neutral-100: #f1f5f9;   /* Ice White (Main high-contrast readable body text) */
+  --color-neutral-200: #cbd5e1;   /* Luxury Silver Slate (Secondary body / subtitle text) */
+  --color-neutral-300: #94a3b8;   /* Muted state text */
+  --color-neutral-450: #64748b;   /* Soft slate labels */
+  --color-neutral-400: #475569;   /* Medium slate, metadata info */
+  --color-neutral-500: #334155;   /* Inactive states / subtle indicators */
+  --color-neutral-600: #1e293b;   /* Dark slate dividers */
+  --color-neutral-700: #1e293b;   /* Dark borders and input outlines */
+  --color-neutral-800: #0f172a;   /* Clean luxury dark border outline */
+  --color-neutral-805: #0a0f1d;   /* Accent borders */
+  --color-neutral-810: #0a0e14;   /* High-end saturated solid dark backgrounds */
+  --color-neutral-850: #0d121a;   /* Softest deep-blue card/surface background */
+  --color-neutral-900: #07090e;   /* Genuine Premium Deep Metallic Blackish Page Background */
+  --color-neutral-905: #040508;   /* Deepest near-black base surface */
+  --color-neutral-950: #0f141d;   /* High-contrast luxury charcoal cards and headers */
+
+  /* Royal Titan Midnight Sapphire Accent Strip (New gorgeous color option for sections) */
+  --color-sapphire-50: #f0f5fa;
+  --color-sapphire-100: #dbe7f2;
+  --color-sapphire-500: #1A324D;  /* Rich Deep Prussian / Midnight Blue */
+  --color-sapphire-600: #14283f;
+  --color-sapphire-900: #0a1726;
+
+  /* Imperial Titan Emerald Accent Strip -> Replaced with pristine sapphire */
+  --color-emerald-500: #0d2e5c;   /* Deep Ocean Sapphire */
+
+  /* Exquisite Champagne Gold Accent Palette -> Re-conceptualized completely into Majestic Cobalt Blue */
+  --color-amber-50: #f0f7ff;
+  --color-amber-100: #e0f0ff;
+  --color-amber-200: #c0defe;
+  --color-amber-300: #93c8fd;
+  --color-amber-400: #60a5fa;     /* Vibrant cobalt sapphire highlight */
+  --color-amber-500: #2563EB;     /* Royal Cobalt Blue Main Accent */
+  --color-amber-600: #1D4ED8;     /* Bright Royal Blue */
+  --color-amber-700: #1A324D;     /* Majestic Prussian Navy */
+  --color-amber-800: #14283f;
+  --color-amber-900: #0a1726;
+  --color-amber-950: #040a12;
+}
+
+/* Custom Overrides for Dark Theme Elegance and High Contrast */
+.text-white {
+  color: var(--color-neutral-100) !important;
+}
+
+/* Allow text-white overrides in buttons and specialized badges with solid backgrounds */
+.bg-amber-500 .text-white,
+.bg-amber-600 .text-white,
+.bg-red-500 .text-white,
+.bg-neutral-900 .text-white,
+.bg-neutral-950 .text-white,
+.bg-stone-900 .text-white,
+.bg-sapphire-500 .text-white,
+.bg-sapphire-600 .text-white,
+.bg-sapphire-900 .text-white,
+.bg-emerald-500 .text-white {
+  color: #ffffff !important; /* Forces pure white overlay text on dark blocks */
+}
+
+.hover\:text-white:hover {
+  color: #ffffff !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-neutral-100);
+  font-family: var(--font-serif);
+  letter-spacing: -0.02em;
+}
+
+/* Ensure the gold/blue colored titles stay striking */
+h1 .text-amber-500,
+h2 .text-amber-500,
+h3 .text-amber-500,
+span.text-amber-500,
+span.text-amber-400 {
+  color: var(--color-amber-500) !important;
+}
+
+/* Subtle shadows and outlines to emphasize content containers */
+input, textarea, select {
+  background-color: var(--color-neutral-905) !important;
+  color: var(--color-neutral-100) !important;
+  border-color: var(--color-neutral-700) !important;
+  font-family: var(--font-sans);
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--color-amber-400) !important;
+}
+
+/* Make image overlays more striking in a dark aesthetic */
+.brightness-\[0\.6\] {
+  filter: brightness(0.7);
+}
+
+.brightness-\[0\.9\] {
+  filter: brightness(0.85);
+}
+
+/* Luxury animations and effects */
+@keyframes goldShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.gold-shimmer-bg {
+  background: linear-gradient(90deg, #1A324D 25%, #60a5fa 50%, #1A324D 75%);
+  background-size: 200% 100%;
+  animation: goldShimmer 3s infinite linear;
+}
+
+.titan-card-glow {
+  box-shadow: 0 4px 20px -2px rgba(26, 50, 77, 0.2), 0 2px 8px -1px rgba(26, 50, 77, 0.1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border-color: var(--color-neutral-800) !important;
+}
+
+.titan-card-glow:hover {
+  box-shadow: 0 12px 30px -4px rgba(37, 99, 235, 0.25), 0 4px 12px -2px rgba(37, 99, 235, 0.15);
+  border-color: #2563EB !important;
+  background-color: var(--color-neutral-905) !important;
+}

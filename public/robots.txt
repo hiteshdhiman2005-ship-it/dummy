@@ -1,0 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Host & Sitemaps
+Sitemap: https://project-time24.netlify.app/sitemap.xml
