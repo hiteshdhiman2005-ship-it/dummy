@@ -7,24 +7,31 @@ interface SEOProps {
   schema?: object | object[];
 }
 
+function setMetaTag(attrName: 'name' | 'property', attrValue: string, content: string) {
+  let tag = document.querySelector(`meta[${attrName}="${attrValue}"]`) as HTMLMetaElement | null;
+  if (!tag) {
+    tag = document.createElement('meta');
+    document.head.appendChild(tag);
+  }
+  tag.setAttribute(attrName, attrValue);
+  tag.setAttribute('content', content);
+}
+
 export function useSEO({ title, description, keywords, schema }: SEOProps) {
   useEffect(() => {
-    // Dynamically update page title
     document.title = title;
 
-    // Dynamically update or create meta description tag
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.setAttribute('content', description);
+    setMetaTag('name', 'description', description);
+    setMetaTag('name', 'robots', 'index,follow,max-image-preview:large,max-snippet:-1');
+    setMetaTag('property', 'og:title', title);
+    setMetaTag('property', 'og:description', description);
+    setMetaTag('property', 'og:type', 'website');
+    setMetaTag('name', 'twitter:title', title);
+    setMetaTag('name', 'twitter:description', description);
+    setMetaTag('name', 'twitter:card', 'summary_large_image');
 
-    // Dynamically update or create meta keywords tag
-    // Ensure no collision by searching for both singular "keyword" and plural "keywords"
     const singularKeywordMeta = document.querySelectorAll('meta[name="keyword"]');
-    singularKeywordMeta.forEach((el) => el.remove()); // Remove all singular "keyword" elements to prevent conflicts
+    singularKeywordMeta.forEach((el) => el.remove());
 
     if (keywords) {
       const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
@@ -36,15 +43,13 @@ export function useSEO({ title, description, keywords, schema }: SEOProps) {
       }
       metaKeywords.setAttribute('content', keywordsString);
     } else {
-      // Clean up plural keywords tag if none specified for this view
       const existingKeywords = document.querySelector('meta[name="keywords"]');
       if (existingKeywords) {
         existingKeywords.remove();
       }
     }
 
-    // Dynamically update or create canonical link tag
-    const baseUrl = 'https://project-time24.netlify.app';
+    const baseUrl = window.location.origin || 'https://project-time24.netlify.app';
     const cleanPath = window.location.pathname === '/' ? '' : window.location.pathname;
     const canonicalUrl = `${baseUrl}${cleanPath}`;
 
@@ -55,8 +60,8 @@ export function useSEO({ title, description, keywords, schema }: SEOProps) {
       document.head.appendChild(linkCanonical);
     }
     linkCanonical.setAttribute('href', canonicalUrl);
+    setMetaTag('property', 'og:url', canonicalUrl);
 
-    // Dynamically create or update schema script tag
     if (schema) {
       let schemaScript = document.querySelector('script[id="seo-schema"]') as HTMLScriptElement;
       if (!schemaScript) {

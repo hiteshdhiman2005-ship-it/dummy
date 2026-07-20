@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ShoppingBag, Plus, Minus, Trash2, ArrowRight, Lock, CheckCircle2 } from 'lucide-react';
-import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import { Routes, Route, useLocation, useNavigate, Navigate } from 'react-router-dom';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -141,18 +141,7 @@ export default function App() {
                 }
               />
               <Route path="/about" element={<About />} />
-              <Route
-                path="/services"
-                element={
-                  <Products
-                    onAddToCart={handleAddToCart}
-                    selectedCategory={selectedCategory}
-                    setSelectedCategory={setSelectedCategory}
-                    wishlist={wishlist}
-                    onToggleWishlist={handleToggleWishlist}
-                  />
-                }
-              />
+              <Route path="/services" element={<Navigate to="/products" replace />} />
               <Route
                 path="/products"
                 element={
