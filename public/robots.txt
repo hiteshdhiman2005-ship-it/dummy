@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Host & Sitemaps
-Sitemap: https://project-time24.netlify.app/sitemap.xml
+Sitemap: https://dummy-eight-inky.vercel.app/sitemap.xml
