@@ -39,6 +39,7 @@ export default function Wishlist({
       'prestigetime saved items',
       'timepiece collection planner'
     ],
+    indexable: false,
   });
 
   return (

@@ -5,6 +5,8 @@ interface SEOProps {
   description: string;
   keywords?: string | string[];
   schema?: object | object[];
+  image?: string;
+  indexable?: boolean;
 }
 
 function setMetaTag(attrName: 'name' | 'property', attrValue: string, content: string) {
@@ -17,15 +19,20 @@ function setMetaTag(attrName: 'name' | 'property', attrValue: string, content: s
   tag.setAttribute('content', content);
 }
 
-export function useSEO({ title, description, keywords, schema }: SEOProps) {
+export function useSEO({ title, description, keywords, schema, image, indexable = true }: SEOProps) {
   useEffect(() => {
     document.title = title;
 
     setMetaTag('name', 'description', description);
-    setMetaTag('name', 'robots', 'index,follow,max-image-preview:large,max-snippet:-1');
+    setMetaTag(
+      'name',
+      'robots',
+      indexable ? 'index,follow,max-image-preview:large,max-snippet:-1' : 'noindex,follow'
+    );
     setMetaTag('property', 'og:title', title);
     setMetaTag('property', 'og:description', description);
     setMetaTag('property', 'og:type', 'website');
+    setMetaTag('property', 'og:site_name', 'PrestigeTime');
     setMetaTag('name', 'twitter:title', title);
     setMetaTag('name', 'twitter:description', description);
     setMetaTag('name', 'twitter:card', 'summary_large_image');
@@ -62,6 +69,10 @@ export function useSEO({ title, description, keywords, schema }: SEOProps) {
     linkCanonical.setAttribute('href', canonicalUrl);
     setMetaTag('property', 'og:url', canonicalUrl);
 
+    const socialImage = image || `${baseUrl}/prestigetime-social.jpg`;
+    setMetaTag('property', 'og:image', socialImage);
+    setMetaTag('name', 'twitter:image', socialImage);
+
     if (schema) {
       let schemaScript = document.querySelector('script[id="seo-schema"]') as HTMLScriptElement;
       if (!schemaScript) {
@@ -84,5 +95,5 @@ export function useSEO({ title, description, keywords, schema }: SEOProps) {
         existingScript.remove();
       }
     };
-  }, [title, description, keywords, schema]);
+  }, [title, description, keywords, schema, image, indexable]);
 }
