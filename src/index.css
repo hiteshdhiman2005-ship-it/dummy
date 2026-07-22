@@ -33,18 +33,18 @@
   /* Imperial Titan Emerald Accent Strip -> Replaced with pristine sapphire */
   --color-emerald-500: #0d2e5c;   /* Deep Ocean Sapphire */
 
-  /* Exquisite Champagne Gold Accent Palette -> Re-conceptualized completely into Majestic Cobalt Blue */
-  --color-amber-50: #f0f7ff;
-  --color-amber-100: #e0f0ff;
-  --color-amber-200: #c0defe;
-  --color-amber-300: #93c8fd;
-  --color-amber-400: #60a5fa;     /* Vibrant cobalt sapphire highlight */
-  --color-amber-500: #2563EB;     /* Royal Cobalt Blue Main Accent */
-  --color-amber-600: #1D4ED8;     /* Bright Royal Blue */
-  --color-amber-700: #1A324D;     /* Majestic Prussian Navy */
-  --color-amber-800: #14283f;
-  --color-amber-900: #0a1726;
-  --color-amber-950: #040a12;
+  /* Warm brass accents keep the dark surfaces grounded in watchmaking. */
+  --color-amber-50: #fff9eb;
+  --color-amber-100: #f8edcf;
+  --color-amber-200: #eed49c;
+  --color-amber-300: #dfb968;
+  --color-amber-400: #d39a3b;
+  --color-amber-500: #b9822f;
+  --color-amber-600: #956522;
+  --color-amber-700: #704817;
+  --color-amber-800: #4d3013;
+  --color-amber-900: #2f1d0c;
+  --color-amber-950: #170e06;
 }
 
 /* Custom Overrides for Dark Theme Elegance and High Contrast */

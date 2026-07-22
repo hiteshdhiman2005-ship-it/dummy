@@ -195,62 +195,44 @@ export default function Home({ setSelectedCategory }: HomeProps) {
     <div id="home-page-container" className="bg-neutral-900 text-neutral-100 font-sans min-h-screen">
       
       {/* 1. Hero Section */}
-      <section className="relative h-[85vh] flex items-center justify-center overflow-hidden bg-radial from-neutral-800 to-neutral-950 border-b border-neutral-800">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(245,158,11,0.06),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.02),transparent_40%)]" />
-        
-        {/* Underpinning Background Hero Image overlay */}
-        <div className="absolute inset-0 opacity-25">
-          <img
-            src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=75&w=1200"
-            srcSet="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=70&w=640 640w,
-                    https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=75&w=1080 1080w,
-                    https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=1920 1920w"
-            sizes="100vw"
-            fetchPriority="high"
-            alt="Hero Background"
-            className="w-full h-full object-cover object-center filter grayscale contrast-125 select-none pointer-events-none"
-            referrerPolicy="no-referrer"
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/70 to-transparent" />
-
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10 flex flex-col items-center">
+      <section className="relative overflow-hidden border-b border-neutral-800 bg-[#11100e]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_35%,rgba(184,134,64,0.16),transparent_34%),linear-gradient(115deg,#11100e_0%,#17130e_48%,#0b0b0a_100%)]" />
+        <div className="relative mx-auto grid min-h-[calc(100vh-138px)] max-w-7xl items-center gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:px-8 lg:py-16">
+          <div className="relative z-10 max-w-xl">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-3 px-3 py-1 bg-neutral-800/80 border border-neutral-700 rounded-full flex items-center space-x-1.5"
+            className="mb-6 flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.28em] text-amber-300"
           >
-            <Sparkles className="h-3.5 w-3.5 text-amber-400" />
-            <span className="text-[10px] sm:text-xs uppercase tracking-widest font-semibold text-neutral-300">
-              The PrestigeTime Standard
-            </span>
+            <span className="h-px w-10 bg-amber-500" />
+            <Sparkles className="h-3.5 w-3.5" />
+            <span>Independent watchmaking, considered daily</span>
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="font-serif text-4xl sm:text-6xl md:text-7xl font-semibold tracking-tight text-white mb-6 leading-tight max-w-4xl"
+            className="mb-6 max-w-2xl font-serif text-5xl font-semibold leading-[0.98] tracking-tight text-white sm:text-6xl lg:text-7xl"
           >
-            Luxury Watches for Men That <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-500">Define Excellence</span>
+            Time, <span className="text-amber-400">well made.</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-neutral-300 text-base sm:text-lg md:text-xl font-light tracking-wide max-w-2xl text-center mb-10 leading-relaxed"
+            className="mb-10 max-w-lg text-left text-base font-light leading-relaxed tracking-wide text-neutral-300 sm:text-lg"
           >
-            Discover premium timepieces crafted with precision, elegance, and timeless style. Whether you’re searching for a classic Titan watch for men, elite Rado watches for men, or other signature selections, PrestigeTime offers the perfect watch for every occasion.
+            Thoughtful proportions, dependable movements, and materials chosen to age beautifully. Find the piece that becomes part of your story.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.45 }}
-            className="flex flex-col sm:flex-row gap-4 items-center"
+            className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center"
           >
             <button
               id="hero-shop-collection-btn"
@@ -259,7 +241,7 @@ export default function Home({ setSelectedCategory }: HomeProps) {
                 navigate('/services');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
-              className="px-8 py-4 bg-amber-500 hover:bg-amber-400 text-neutral-950 text-sm font-bold tracking-widest rounded-md transition-all duration-300 cursor-pointer shadow-lg shadow-amber-500/10 hover:shadow-amber-500/20 w-fit min-w-[200px]"
+              className="w-fit min-w-[190px] cursor-pointer rounded-sm bg-amber-500 px-7 py-4 text-sm font-bold tracking-[0.16em] text-neutral-950 shadow-lg shadow-amber-900/20 transition-all duration-300 hover:bg-amber-400 hover:shadow-amber-500/20"
             >
               SHOP COLLECTION
             </button>
@@ -270,12 +252,32 @@ export default function Home({ setSelectedCategory }: HomeProps) {
                 navigate('/services');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
-              className="px-8 py-4 bg-neutral-900 border border-neutral-700 text-neutral-200 hover:text-white hover:bg-neutral-800 text-sm font-bold tracking-widest rounded-md transition-all duration-300 cursor-pointer w-fit min-w-[200px] flex items-center justify-center space-x-2"
+              className="flex w-fit min-w-[190px] cursor-pointer items-center justify-center space-x-2 rounded-sm border border-neutral-600 bg-white/[0.03] px-7 py-4 text-sm font-bold tracking-[0.16em] text-neutral-200 transition-all duration-300 hover:bg-white/[0.08] hover:text-white"
             >
               <span>EXPLORE NEW ARRIVALS</span>
               <ArrowRight className="h-4 w-4" />
             </button>
           </motion.div>
+          </div>
+          <div className="relative flex min-h-[390px] items-center justify-center lg:min-h-[560px]">
+            <div className="absolute h-[72%] w-[72%] rounded-full bg-amber-500/10 blur-3xl" />
+            <div className="absolute right-0 top-1/2 h-[78%] w-[86%] -translate-y-1/2 overflow-hidden rounded-[45%_45%_8%_8%] border border-amber-200/20 bg-neutral-950/40 shadow-2xl shadow-black/40">
+              <img
+                src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=85&w=1200"
+                srcSet="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=640 640w, https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=85&w=1200 1200w"
+                sizes="(max-width: 1024px) 90vw, 50vw"
+                fetchPriority="high"
+                alt="Close-up of a PrestigeTime mechanical watch"
+                className="h-full w-full object-cover object-center"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#0c0b09]/45 via-transparent to-amber-100/10" />
+            </div>
+            <div className="absolute bottom-4 left-0 z-10 border-l-2 border-amber-500 bg-neutral-950/80 px-4 py-3 backdrop-blur-sm sm:bottom-10 sm:left-4">
+              <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-amber-300">PT / 01</p>
+              <p className="mt-1 text-xs text-neutral-300">The automatic collection</p>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -94,12 +94,12 @@ export default function Header({
               id="header-wishlist-btn"
               to="/wishlist"
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className={`p-2.5 text-neutral-400 hover:text-red-400 hover:bg-neutral-800/60 rounded-full transition-all relative cursor-pointer focus:outline-none ${
-                currentPath === '/wishlist' ? 'text-red-400 border border-red-500/10 bg-red-500/5' : ''
+              className={`p-2.5 text-neutral-400 hover:text-amber-400 hover:bg-neutral-800/60 rounded-full transition-all relative cursor-pointer focus:outline-none ${
+                currentPath === '/wishlist' ? 'text-amber-400' : ''
               }`}
               aria-label="View Wishlist"
             >
-              <Heart className={`h-6 w-6 ${currentPath === '/wishlist' ? 'fill-red-500 text-red-500' : 'text-neutral-300 hover:text-red-400'}`} />
+              <Heart className={`h-6 w-6 ${currentPath === '/wishlist' ? 'fill-amber-500 text-amber-500' : 'text-neutral-300 hover:text-amber-400'}`} />
               {wishlistCount > 0 && (
                 <motion.span
                   initial={{ scale: 0 }}
