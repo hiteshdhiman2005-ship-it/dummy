@@ -115,7 +115,7 @@ export default function Wishlist({
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.95 }}
                     transition={{ duration: 0.3 }}
-                    className="group bg-neutral-950 border border-neutral-800/80 rounded-xl overflow-hidden titan-card-glow flex flex-col h-full relative"
+                    className="group bg-neutral-950 border border-neutral-800/80 rounded-xl overflow-hidden watch-card-glow flex flex-col h-full relative"
                   >
                     {/* Delete/Heart Action in Top Right corner */}
                     <button

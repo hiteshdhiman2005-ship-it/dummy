@@ -33,12 +33,12 @@ export default function Home({ setSelectedCategory }: HomeProps) {
 
   // Dynamic SEO Configuration using high-volume, low-difficulty keywords requested by user
   useSEO({
-    title: 'Watches for Men | Titan Watch for Men & Fossil Watch for Men',
-    description: 'Shop premium watches for men, including Titan watch for men and Fossil watch for men. Explore stylish, durable, and affordable timepieces for every occasion.',
+    title: 'Watches for Men | Independent Watchmaking Brands & Custom Automatic Watches',
+    description: 'Shop premium watches for men, featuring independent watchmaking brands and custom automatic watches. Explore stylish, durable, and precise timepieces crafted for collectors.',
     keywords: [
       'watches for men',
-      'titan watch for men',
-      'rado watches for men',
+      'independent watchmaking brands',
+      'custom automatic watches',
       'luxury brand comparison',
       'affordable Swiss automatic watches',
       'buy watches online store',
@@ -51,7 +51,7 @@ export default function Home({ setSelectedCategory }: HomeProps) {
         'name': 'PrestigeTime',
         'url': typeof window !== 'undefined' ? window.location.origin : 'https://prestigetime.com',
         'image': 'https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&q=80&w=600',
-        'description': 'Shop premium watches for men, including Titan watch for men and Fossil watch for men. Explore stylish, durable, and affordable timepieces for every occasion.',
+        'description': 'Shop premium watches for men, featuring independent watchmaking brands and custom automatic watches. Explore stylish, durable, and precise timepieces crafted for collectors.',
         'priceRange': '$$$',
         'address': {
           '@type': 'PostalAddress',
@@ -286,7 +286,7 @@ export default function Home({ setSelectedCategory }: HomeProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-serif text-3xl sm:text-4xl font-semibold tracking-wide text-white mb-4">
-              Featured Watches for Men Curation: Titan Watch for Men & Rado Watches for Men
+              Featured Watches for Men Curation: Independent Watchmaking Brands & Custom Automatic Watches
             </h2>
             <div className="h-1 w-20 bg-amber-500 mx-auto rounded mb-4" />
             <p className="text-neutral-400 text-sm sm:text-base">
@@ -348,11 +348,11 @@ export default function Home({ setSelectedCategory }: HomeProps) {
                 Uncompromising Values
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl font-semibold tracking-tight text-white">
-                Why Choose Our Titan Watch for Men & Rado Watches for Men?
+                Why Choose Our Independent Watchmaking Brands & Custom Automatic Watches?
               </h2>
               <div className="h-0.5 w-16 bg-amber-500 rounded" />
               <p className="text-neutral-400 text-sm leading-relaxed max-w-md">
-                Every timepiece in our collections—from the innovative Titan watch for men line to the executive prestige of Rado watches for men—represents an investment in meticulous calibration. We hand-select premium watch manufacturers globally to provide an unparalleled ownership experience.
+                Every timepiece in our collections—from independent watchmaking brands to custom automatic watches—represents an investment in meticulous calibration. We hand-select premium watch designers globally to provide an unparalleled ownership experience.
               </p>
               <div className="relative rounded-xl overflow-hidden h-48 border border-neutral-800">
                 <img
@@ -401,7 +401,7 @@ export default function Home({ setSelectedCategory }: HomeProps) {
         </div>
       </section>
 
-      {/* 4. Active Watch Customizer - Titan Prestige Studio */}
+      {/* 4. Active Watch Customizer - Independent Custom Studio */}
       <section className="py-20 bg-neutral-810 border-t border-b border-neutral-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -409,11 +409,11 @@ export default function Home({ setSelectedCategory }: HomeProps) {
               Interactive Showroom
             </span>
             <h2 className="font-serif text-3xl sm:text-5xl font-semibold tracking-wide text-white mt-4 mb-3">
-              Bespoke Watches for Men: Titan Watch for Men & Rado Watches for Men
+              Bespoke Watches for Men: Independent Watchmaking Brands & Custom Automatic Watches
             </h2>
             <div className="h-0.5 w-16 bg-amber-500 mx-auto rounded mb-4" />
             <p className="text-neutral-400 text-xs sm:text-sm font-light uppercase tracking-widest">
-              Design & Configure Your Masterpiece Titan Watch for Men or Elegant Rado Watches for Men
+              Design & Configure Your Masterpiece Custom Automatic Watch or Independent Watchmaking Brand Piece
             </p>
           </div>
 
@@ -466,7 +466,7 @@ export default function Home({ setSelectedCategory }: HomeProps) {
                       <div className="absolute top-[32px] text-center">
                         <span className={`text-[8px] font-semibold tracking-[0.25em] uppercase pointer-events-none block ${
                           selectedDial === 'Alabaster' ? 'text-neutral-800/80' : 'text-amber-400/80'
-                        }`}>TITAN</span>
+                        }`}>CUSTOM</span>
                         <span className={`text-[5px] tracking-widest font-mono pointer-events-none ${
                           selectedDial === 'Alabaster' ? 'text-neutral-500' : 'text-neutral-400/70'
                         }`}>CHRONO</span>
@@ -551,7 +551,7 @@ export default function Home({ setSelectedCategory }: HomeProps) {
                   Refine Every Precision Part
                 </h3>
                 <p className="mt-2 text-neutral-400 text-xs sm:text-sm font-light">
-                  Tailor the core materials of our master-crafted timepiece. Feel the prestige of Swiss-level physical aesthetics matching Titan's premium craftsmanship.
+                  Tailor the core materials of our master-crafted timepiece. Feel the prestige of Swiss-level physical aesthetics matched with independent craftsmanship and custom automatic movement design.
                 </p>
               </div>
 
@@ -708,7 +708,7 @@ export default function Home({ setSelectedCategory }: HomeProps) {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="text-center max-w-3xl mx-auto mb-10">
             <h2 className="font-serif text-3xl sm:text-4xl font-semibold tracking-wide text-white mb-2">
-              Customer Reviews for Titan Watch for Men & Rado Watches for Men
+              Customer Reviews for Independent Watchmaking Brands & Custom Automatic Watches
             </h2>
             <div className="h-1 w-16 bg-amber-500 mx-auto rounded" />
           </div>
@@ -761,7 +761,7 @@ export default function Home({ setSelectedCategory }: HomeProps) {
               Horology Education Hub
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl font-semibold tracking-wide text-white mb-4">
-              Titan Watch for Men & Rado Watches for Men: Buyer’s Guide
+              Independent Watchmaking Brands & Custom Automatic Watches: Buyer’s Guide
             </h2>
             <div className="h-0.5 w-16 bg-blue-500 mx-auto rounded mb-4" />
             <p className="text-neutral-400 text-sm max-w-lg mx-auto font-sans leading-relaxed">
@@ -772,10 +772,10 @@ export default function Home({ setSelectedCategory }: HomeProps) {
           <div className="space-y-4">
             {[
               {
-                question: "How do Titan watch for men and Rado watches for men compare in quality and style?",
-                answer: "Titan watch for men configurations represent excellent craftsmanship, stylistic versatility, and daily durability, making them a superb choice for practical modern wearers. Meanwhile, Rado watches for men are widely renowned for their high-tech scratch-resistant ceramic casings, Swiss mechanical mastery, and legendary endurance. Both brands offer incredible value within their respective classes, ensuring premium statement style for any collector's wardrobe.",
+                question: "What makes independent watchmaking brands and custom automatic watches stand out for collectors?",
+                answer: "Independent watchmaking brands stand out through handcrafted finishing, limited production runs, and unique design details. Custom automatic watches offer owners a tailored movement, rare materials, and a personalized dial experience that combines mechanical precision with artisanal character.",
                 tag: "High Volume, Low Difficulty Search Topic",
-                keywords: ["titan watch for men", "rado watches for men", "luxury brand comparison"]
+                keywords: ["independent watchmaking brands", "custom automatic watches", "luxury brand comparison"]
               },
               {
                 question: "What are the best entry level luxury watches for new collectors?",

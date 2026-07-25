@@ -184,7 +184,7 @@ export default function Products({
                   initial={{ opacity: 0, y: 25 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.35, delay: Math.min(idx, 3) * 0.02 }}
-                  className="group bg-neutral-950 border border-neutral-800/80 rounded-xl overflow-hidden titan-card-glow flex flex-col h-full select-none"
+                  className="group bg-neutral-950 border border-neutral-800/80 rounded-xl overflow-hidden watch-card-glow flex flex-col h-full select-none"
                 >
                   {/* Watch Card Image Wrapper */}
                   <div className="relative aspect-square overflow-hidden bg-neutral-900 border-b border-neutral-800">
