@@ -45,7 +45,7 @@ export default function Header({
         <span className="text-amber-100/90 font-semibold">Prestige Studio Configurator Live below — Tailor Your Gilded Calibre today</span>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex h-20 items-center justify-between gap-4">
           
           {/* Logo */}
           <Link
@@ -55,13 +55,13 @@ export default function Header({
               setIsOpen(false);
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="flex items-center focus:outline-none"
+            className="flex shrink-0 items-center focus:outline-none"
           >
             <PrestigeLogo size="sm" />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex flex-1 items-center justify-end gap-2 whitespace-nowrap lg:gap-4 xl:gap-6">
             {navItems.map((item) => {
               const isActive = currentPath === item.path;
               return (
@@ -70,7 +70,7 @@ export default function Header({
                   key={item.path}
                   to={item.path}
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className={`relative text-sm tracking-widest uppercase transition-colors duration-200 cursor-pointer py-2 focus:outline-none ${
+                  className={`relative whitespace-nowrap px-1 py-2 text-[10px] sm:text-xs lg:text-sm tracking-[0.22em] uppercase transition-colors duration-200 cursor-pointer focus:outline-none ${
                     isActive ? 'text-amber-400 font-medium' : 'text-neutral-400 hover:text-white'
                   }`}
                 >
@@ -88,7 +88,7 @@ export default function Header({
           </nav>
 
           {/* Shopping Bag and Mobile Drawer toggles */}
-          <div className="flex items-center space-x-4">
+          <div className="flex shrink-0 items-center space-x-3 sm:space-x-4">
             {/* Wishlist Button */}
             <Link
               id="header-wishlist-btn"

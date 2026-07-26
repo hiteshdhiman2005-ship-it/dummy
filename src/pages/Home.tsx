@@ -286,7 +286,7 @@ export default function Home({ setSelectedCategory }: HomeProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-serif text-3xl sm:text-4xl font-semibold tracking-wide text-white mb-4">
-              Featured Watches for Men Curation: Independent Watchmaking Brands & Custom Automatic Watches
+              Featured Collections
             </h2>
             <div className="h-1 w-20 bg-amber-500 mx-auto rounded mb-4" />
             <p className="text-neutral-400 text-sm sm:text-base">
@@ -348,7 +348,7 @@ export default function Home({ setSelectedCategory }: HomeProps) {
                 Uncompromising Values
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl font-semibold tracking-tight text-white">
-                Why Choose Our Independent Watchmaking Brands & Custom Automatic Watches?
+                Why Choose Us
               </h2>
               <div className="h-0.5 w-16 bg-amber-500 rounded" />
               <p className="text-neutral-400 text-sm leading-relaxed max-w-md">
@@ -409,7 +409,7 @@ export default function Home({ setSelectedCategory }: HomeProps) {
               Interactive Showroom
             </span>
             <h2 className="font-serif text-3xl sm:text-5xl font-semibold tracking-wide text-white mt-4 mb-3">
-              Bespoke Watches for Men: Independent Watchmaking Brands & Custom Automatic Watches
+              Bespoke Studio
             </h2>
             <div className="h-0.5 w-16 bg-amber-500 mx-auto rounded mb-4" />
             <p className="text-neutral-400 text-xs sm:text-sm font-light uppercase tracking-widest">
@@ -708,7 +708,7 @@ export default function Home({ setSelectedCategory }: HomeProps) {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="text-center max-w-3xl mx-auto mb-10">
             <h2 className="font-serif text-3xl sm:text-4xl font-semibold tracking-wide text-white mb-2">
-              Customer Reviews for Independent Watchmaking Brands & Custom Automatic Watches
+              Reviews
             </h2>
             <div className="h-1 w-16 bg-amber-500 mx-auto rounded" />
           </div>
@@ -761,7 +761,7 @@ export default function Home({ setSelectedCategory }: HomeProps) {
               Horology Education Hub
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl font-semibold tracking-wide text-white mb-4">
-              Independent Watchmaking Brands & Custom Automatic Watches: Buyer’s Guide
+              Buyer’s Guide
             </h2>
             <div className="h-0.5 w-16 bg-blue-500 mx-auto rounded mb-4" />
             <p className="text-neutral-400 text-sm max-w-lg mx-auto font-sans leading-relaxed">
@@ -802,7 +802,7 @@ export default function Home({ setSelectedCategory }: HomeProps) {
                 keywords: ["best watch microbrands", "custom dial watches", "boutique watchmakers"]
               },
               {
-                question: "What are the most essential mechanical watch maintenance tips (and how to clean keys at home)?",
+                question: "What are the most essential mechanical watch maintenance tips (and how to clean your watch at home)?",
                 answer: "To keep your watch performing flawlessly, follow these mechanical watch maintenance tips: wind your crown manually once a month if not worn, keep it clear of magnetic fields (laptops, electronic systems), and store in dry cases. To clean a mechanical watch at home, wipe down cases gently with a damp microfiber cloth, use soft-bristled utility brushes on linked straps, and strictly ensure your crown is locked down tight.",
                 tag: "High Volume, Low Difficulty Search Topic",
                 keywords: ["mechanical watch maintenance tips", "clean mechanical watch at home", "watch cleaning guide"]
@@ -824,10 +824,6 @@ export default function Home({ setSelectedCategory }: HomeProps) {
                     className="w-full text-left p-5 sm:p-6 flex items-start justify-between gap-4 cursor-pointer focus:outline-none"
                   >
                     <div className="space-y-2">
-                      <span className="inline-flex items-center space-x-1.5 px-2 py-0.5 rounded-full text-[9px] bg-blue-500/10 text-blue-400 font-mono tracking-wider">
-                        <Sparkles className="h-2.5 w-2.5" />
-                        <span>SEO Topic</span>
-                      </span>
                       <h3 className="font-serif text-base sm:text-lg font-medium text-white tracking-wide pr-4">
                         {faq.question}
                       </h3>
