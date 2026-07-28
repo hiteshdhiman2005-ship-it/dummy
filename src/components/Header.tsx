@@ -37,10 +37,10 @@ export default function Header({
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-neutral-900/90 backdrop-blur-md border-b border-neutral-800 text-neutral-100">
+    <header className="sticky top-0 z-50 bg-neutral-900/90 backdrop-blur-md border-b border-neutral-800 text-neutral-1100">
       {/* Premium Metallic Announcement Bar */}
       <div className="gold-shimmer-bg h-1.5 w-full" />
-      <div className="bg-neutral-950 text-white text-[9px] sm:text-[10px] font-mono font-medium py-1.5 px-4 text-center tracking-[0.14em] uppercase border-b border-amber-500/15 flex items-center justify-center space-x-1.5 select-none">
+      <div className="bg-neutral-950 text-white text-[9px] sm:text-[10px] font-mono font-medium py-1.5 px-4 text-center tracking-[0.14em] uppercase border-b border-amber-500/15 items-center justify-center space-x-1.5 select-none">
         <Sparkles className="h-3.5 w-3.5 text-amber-300 animate-pulse" />
         <span className="text-amber-100/90 font-semibold">Prestige Studio Configurator Live below — Tailor Your Gilded Calibre today</span>
       </div>
@@ -115,7 +115,7 @@ export default function Header({
             <button
               id="header-cart-btn"
               onClick={onOpenCart}
-              className="p-2.5 text-neutral-400 hover:text-amber-400 hover:bg-neutral-800/60 rounded-full transition-all relative cursor-pointer focus:outline-none"
+              className="p-2.5 text-neutral-400 hover:text-amber-400 hover:bg-neutral-800/60/60 rounded-full transition-all relative cursor-pointer focus:outline-none"
               aria-label="Open Cart"
             >
               <ShoppingBag className="h-6 w-6 text-neutral-300 hover:text-amber-400" />
@@ -134,7 +134,7 @@ export default function Header({
             <button
               id="header-mobile-menu-btn"
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2.5 text-neutral-400 hover:text-white hover:bg-neutral-800/60 rounded-full cursor-pointer focus:outline-none"
+              className="md:hidden p-2.5 text-neutral-400 hover:text-white hover:bg-neutral-800/6ounded-full cursor-pointer focus:outline-none"
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
