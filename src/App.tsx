@@ -109,7 +109,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-neutral-900 selection:bg-amber-500 selection:text-neutral-950 flex flex-col justify-between">
+    <div className="relative min-h-screen bg-neutral-100 selection:bg-amber-500 selection:text-neutral-950 flex flex-col justify-between">
       
       {/* 1. Header Bar */}
       <Header

@@ -37,10 +37,10 @@ export default function Header({
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-neutral-900/90 backdrop-blur-md border-b border-neutral-800 text-neutral-100">
+    <header className="sticky top-0 z-50 bg-neutral-50/95 backdrop-blur-md border-b border-neutral-300 text-neutral-800">
       {/* Premium Metallic Announcement Bar */}
       <div className="gold-shimmer-bg h-1.5 w-full" />
-      <div className="bg-neutral-950 text-white text-[9px] sm:text-[10px] font-mono font-medium py-1.5 px-4 text-center tracking-[0.14em] uppercase border-b border-amber-500/15 flex items-center justify-center space-x-1.5 select-none">
+      <div className="bg-neutral-100 text-neutral-700 text-[9px] sm:text-[10px] font-mono font-medium py-1.5 px-4 text-center tracking-[0.14em] uppercase border-b border-neutral-300 flex items-center justify-center space-x-1.5 select-none">
         <Sparkles className="h-3.5 w-3.5 text-amber-300 animate-pulse" />
         <span className="text-amber-100/90 font-semibold">Prestige Studio Configurator Live below — Tailor Your Gilded Calibre today</span>
       </div>
@@ -71,7 +71,7 @@ export default function Header({
                   to={item.path}
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className={`relative whitespace-nowrap px-1 py-2 text-[10px] sm:text-xs lg:text-sm tracking-[0.22em] uppercase transition-colors duration-200 cursor-pointer focus:outline-none ${
-                    isActive ? 'text-amber-400 font-medium' : 'text-neutral-400 hover:text-white'
+                    isActive ? 'text-amber-600 font-medium' : 'text-neutral-600 hover:text-neutral-900'
                   }`}
                 >
                   {item.label}
@@ -94,12 +94,12 @@ export default function Header({
               id="header-wishlist-btn"
               to="/wishlist"
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className={`p-2.5 text-neutral-400 hover:text-amber-400 hover:bg-neutral-800/60 rounded-full transition-all relative cursor-pointer focus:outline-none ${
-                currentPath === '/wishlist' ? 'text-amber-400' : ''
+              className={`p-2.5 text-neutral-600 hover:text-amber-600 hover:bg-neutral-200 rounded-full transition-all relative cursor-pointer focus:outline-none ${
+                currentPath === '/wishlist' ? 'text-amber-600' : ''
               }`}
               aria-label="View Wishlist"
             >
-              <Heart className={`h-6 w-6 ${currentPath === '/wishlist' ? 'fill-amber-500 text-amber-500' : 'text-neutral-300 hover:text-amber-400'}`} />
+              <Heart className={`h-6 w-6 ${currentPath === '/wishlist' ? 'fill-amber-500 text-amber-500' : 'text-neutral-600 hover:text-amber-600'}`} />
               {wishlistCount > 0 && (
                 <motion.span
                   initial={{ scale: 0 }}
@@ -115,10 +115,10 @@ export default function Header({
             <button
               id="header-cart-btn"
               onClick={onOpenCart}
-              className="p-2.5 text-neutral-400 hover:text-amber-400 hover:bg-neutral-800/60 rounded-full transition-all relative cursor-pointer focus:outline-none"
+              className="p-2.5 text-neutral-600 hover:text-amber-600 hover:bg-neutral-200 rounded-full transition-all relative cursor-pointer focus:outline-none"
               aria-label="Open Cart"
             >
-              <ShoppingBag className="h-6 w-6 text-neutral-300 hover:text-amber-400" />
+              <ShoppingBag className="h-6 w-6 text-neutral-600 hover:text-amber-600" />
               {cartItemsCount > 0 && (
                 <motion.span
                   initial={{ scale: 0 }}
@@ -134,7 +134,7 @@ export default function Header({
             <button
               id="header-mobile-menu-btn"
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2.5 text-neutral-400 hover:text-white hover:bg-neutral-800/60 rounded-full cursor-pointer focus:outline-none"
+              className="md:hidden p-2.5 text-neutral-600 hover:text-neutral-900 hover:bg-neutral-200 rounded-full cursor-pointer focus:outline-none"
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
