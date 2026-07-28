@@ -19,9 +19,9 @@
   --color-neutral-805: #161311;   /* Subtle card border */
   --color-neutral-810: #12100d;   /* Deeper surface */
   --color-neutral-850: #171410;   /* Soft dark card background */
-  --color-neutral-900: #0f0d0b;   /* Rich charcoal page background */
-  --color-neutral-905: #0a0907;   /* Deep base surface */
-  --color-neutral-950: #121210;   /* Elegant header/card surface */
+  --color-neutral-900: #15120f;   /* Rich warm charcoal page background */
+  --color-neutral-905: #100d0a;   /* Deeper base surface */
+  --color-neutral-950: #1a1713;   /* Elegant header/card surface */
 
   /* Slate-blue accents for a calmer, refined look */
   --color-sapphire-50: #eef4f7;
