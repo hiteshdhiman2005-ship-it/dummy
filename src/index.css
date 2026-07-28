@@ -5,46 +5,46 @@
   --font-serif: "Cinzel", Georgia, Cambria, "Times New Roman", Times, serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 
-  /* Clean white and grey premium palette */
-  --color-neutral-50: #ffffff;    /* Pure white */
-  --color-neutral-100: #f5f5f4;   /* Soft warm white */
-  --color-neutral-200: #e7e5e4;   /* Light grey text */
-  --color-neutral-300: #d6d3d1;   /* Soft secondary text */
-  --color-neutral-450: #a8a29e;   /* Muted labels */
-  --color-neutral-400: #78716c;   /* Medium grey metadata */
-  --color-neutral-500: #57534e;   /* Inactive states */
-  --color-neutral-600: #44403c;   /* Divider and muted text */
-  --color-neutral-700: #292524;   /* Border and input outline */
-  --color-neutral-800: #1c1917;   /* Dark grey outline */
-  --color-neutral-805: #1f1b18;   /* Dark card border */
-  --color-neutral-810: #171412;   /* Deeper surface */
-  --color-neutral-850: #f3f4f6;   /* Soft light card background */
-  --color-neutral-900: #f8f8f7;   /* Main page background */
-  --color-neutral-905: #efefed;   /* Light surface */
-  --color-neutral-950: #f2f2f0;   /* Card/header surface */
+  /* Premium watch-website palette: ivory, stone, and muted bronze */
+  --color-neutral-50: #fcfbf8;    /* Warm ivory */
+  --color-neutral-100: #f5f1e8;   /* Soft cream */
+  --color-neutral-200: #e8e0d2;   /* Light stone */
+  --color-neutral-300: #d6cbb8;   /* Gentle secondary text */
+  --color-neutral-450: #a79a86;   /* Muted labels */
+  --color-neutral-400: #7c705d;   /* Medium warm grey */
+  --color-neutral-500: #5c5348;   /* Inactive states */
+  --color-neutral-600: #433d35;   /* Divider and subtle text */
+  --color-neutral-700: #2f2924;   /* Borders */
+  --color-neutral-800: #241f1c;   /* Deep charcoal outline */
+  --color-neutral-805: #1f1b18;   /* Card border */
+  --color-neutral-810: #181512;   /* Deep surface */
+  --color-neutral-850: #f3eee4;   /* Soft card background */
+  --color-neutral-900: #f7f3eb;   /* Main page background */
+  --color-neutral-905: #efe8dc;   /* Light surface */
+  --color-neutral-950: #f0e8db;   /* Header/card surface */
 
-  /* Soft slate accents */
-  --color-sapphire-50: #f8fafc;
-  --color-sapphire-100: #f1f5f9;
-  --color-sapphire-500: #6b7280;  /* Soft grey-blue */
-  --color-sapphire-600: #4b5563;
-  --color-sapphire-900: #374151;
+  /* Refined slate accents */
+  --color-sapphire-50: #f5f7f8;
+  --color-sapphire-100: #e8ecef;
+  --color-sapphire-500: #6d7a83;  /* Soft steel blue */
+  --color-sapphire-600: #55656f;
+  --color-sapphire-900: #39444d;
 
-  /* Mild green accent */
-  --color-emerald-500: #6b7280;
+  /* Muted olive-grey accent */
+  --color-emerald-500: #6f7567;
 
-  /* Soft grey-gold accents */
-  --color-amber-50: #fafaf9;
-  --color-amber-100: #f5f5f4;
-  --color-amber-200: #e7e5e4;
-  --color-amber-300: #d6d3d1;
-  --color-amber-400: #a8a29e;
-  --color-amber-500: #78716c;  /* Neutral grey-gold */
-  --color-amber-600: #57534e;
-  --color-amber-700: #44403c;
-  --color-amber-800: #292524;
-  --color-amber-900: #1c1917;
-  --color-amber-950: #171412;
+  /* Warm bronze accent */
+  --color-amber-50: #fcf6eb;
+  --color-amber-100: #f7ebd9;
+  --color-amber-200: #ead0a5;
+  --color-amber-300: #d6b277;
+  --color-amber-400: #c18f4e;
+  --color-amber-500: #a96f2f;  /* Luxury bronze */
+  --color-amber-600: #8b5523;
+  --color-amber-700: #6e4120;
+  --color-amber-800: #4b2b17;
+  --color-amber-900: #2d1c11;
+  --color-amber-950: #1a120d;
 }
 
 /* Custom Overrides for Dark Theme Elegance and High Contrast */
