@@ -5,51 +5,51 @@
   --font-serif: "Cinzel", Georgia, Cambria, "Times New Roman", Times, serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 
-  /* Luxurious Titan Royal Sapphire & Pristine Obsidian Eyes-Friendly Palette */
-  --color-neutral-50: #ffffff;    /* Pure White (high-contrast text highlights) */
-  --color-neutral-100: #f1f5f9;   /* Ice White (Main high-contrast readable body text) */
-  --color-neutral-200: #cbd5e1;   /* Luxury Silver Slate (Secondary body / subtitle text) */
-  --color-neutral-300: #94a3b8;   /* Muted state text */
-  --color-neutral-450: #64748b;   /* Soft slate labels */
-  --color-neutral-400: #475569;   /* Medium slate, metadata info */
-  --color-neutral-500: #334155;   /* Inactive states / subtle indicators */
-  --color-neutral-600: #1e293b;   /* Dark slate dividers */
-  --color-neutral-700: #1e293b;   /* Dark borders and input outlines */
-  --color-neutral-800: #0f172a;   /* Clean luxury dark border outline */
-  --color-neutral-805: #0a0f1d;   /* Accent borders */
-  --color-neutral-810: #0a0e14;   /* High-end saturated solid dark backgrounds */
-  --color-neutral-850: #0d121a;   /* Softest deep-blue card/surface background */
-  --color-neutral-900: #07090e;   /* Genuine Premium Deep Metallic Blackish Page Background */
-  --color-neutral-905: #040508;   /* Deepest near-black base surface */
-  --color-neutral-950: #0f141d;   /* High-contrast luxury charcoal cards and headers */
+  /* Softer luxury palette with calm contrast and elegant warm accents */
+  --color-neutral-50: #f8f5ef;    /* Soft ivory for premium highlights */
+  --color-neutral-100: #ece7de;   /* Warm off-white body text */
+  --color-neutral-200: #d8cdbb;   /* Muted stone text */
+  --color-neutral-300: #b8a894;   /* Gentle secondary text */
+  --color-neutral-450: #8c7f6d;   /* Soft labels */
+  --color-neutral-400: #6f675d;   /* Medium neutral metadata */
+  --color-neutral-500: #4d443d;   /* Inactive states */
+  --color-neutral-600: #2f2a24;   /* Softer dividers */
+  --color-neutral-700: #23201d;   /* Muted borders */
+  --color-neutral-800: #1a1714;   /* Elegant dark outline */
+  --color-neutral-805: #161311;   /* Subtle card border */
+  --color-neutral-810: #12100d;   /* Deeper surface */
+  --color-neutral-850: #171410;   /* Soft dark card background */
+  --color-neutral-900: #0f0d0b;   /* Rich charcoal page background */
+  --color-neutral-905: #0a0907;   /* Deep base surface */
+  --color-neutral-950: #121210;   /* Elegant header/card surface */
 
-  /* Royal Titan Midnight Sapphire Accent Strip (New gorgeous color option for sections) */
-  --color-sapphire-50: #f0f5fa;
-  --color-sapphire-100: #dbe7f2;
-  --color-sapphire-500: #1A324D;  /* Rich Deep Prussian / Midnight Blue */
-  --color-sapphire-600: #14283f;
-  --color-sapphire-900: #0a1726;
+  /* Slate-blue accents for a calmer, refined look */
+  --color-sapphire-50: #eef4f7;
+  --color-sapphire-100: #dce8ee;
+  --color-sapphire-500: #556f7d;  /* Soft midnight blue */
+  --color-sapphire-600: #44586a;
+  --color-sapphire-900: #24323c;
 
-  /* Imperial Titan Emerald Accent Strip -> Replaced with pristine sapphire */
-  --color-emerald-500: #0d2e5c;   /* Deep Ocean Sapphire */
+  /* Calm muted emerald for subtle emphasis */
+  --color-emerald-500: #4e675d;
 
-  /* Warm brass accents keep the dark surfaces grounded in watchmaking. */
-  --color-amber-50: #fff9eb;
-  --color-amber-100: #f8edcf;
-  --color-amber-200: #eed49c;
-  --color-amber-300: #dfb968;
-  --color-amber-400: #d39a3b;
-  --color-amber-500: #b9822f;
-  --color-amber-600: #956522;
-  --color-amber-700: #704817;
-  --color-amber-800: #4d3013;
-  --color-amber-900: #2f1d0c;
-  --color-amber-950: #170e06;
+  /* Warm champagne accents */
+  --color-amber-50: #fcf3e7;
+  --color-amber-100: #f7e5c8;
+  --color-amber-200: #e6c89a;
+  --color-amber-300: #d2aa74;
+  --color-amber-400: #c29453;
+  --color-amber-500: #b07d3f;  /* Muted gold */
+  --color-amber-600: #8f6534;
+  --color-amber-700: #704d28;
+  --color-amber-800: #52361d;
+  --color-amber-900: #342113;
+  --color-amber-950: #20150d;
 }
 
 /* Custom Overrides for Dark Theme Elegance and High Contrast */
 .text-white {
-  color: var(--color-neutral-100) !important;
+  color: var(--color-neutral-50) !important;
 }
 
 /* Allow text-white overrides in buttons and specialized badges with solid backgrounds */
@@ -113,19 +113,19 @@ input:focus, textarea:focus, select:focus {
 }
 
 .gold-shimmer-bg {
-  background: linear-gradient(90deg, #1A324D 25%, #60a5fa 50%, #1A324D 75%);
+  background: linear-gradient(90deg, #556f7d 20%, #d2aa74 50%, #556f7d 80%);
   background-size: 200% 100%;
   animation: goldShimmer 3s infinite linear;
 }
 
 .titan-card-glow {
-  box-shadow: 0 4px 20px -2px rgba(26, 50, 77, 0.2), 0 2px 8px -1px rgba(26, 50, 77, 0.1);
+  box-shadow: 0 4px 20px -2px rgba(85, 111, 125, 0.16), 0 2px 8px -1px rgba(85, 111, 125, 0.1);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   border-color: var(--color-neutral-800) !important;
 }
 
 .titan-card-glow:hover {
-  box-shadow: 0 12px 30px -4px rgba(37, 99, 235, 0.25), 0 4px 12px -2px rgba(37, 99, 235, 0.15);
-  border-color: #2563EB !important;
+  box-shadow: 0 12px 30px -4px rgba(176, 125, 63, 0.2), 0 4px 12px -2px rgba(176, 125, 63, 0.14);
+  border-color: var(--color-amber-500) !important;
   background-color: var(--color-neutral-905) !important;
 }
