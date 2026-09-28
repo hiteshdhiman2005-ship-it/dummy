@@ -260,22 +260,13 @@ export default function Home({ setSelectedCategory }: HomeProps) {
           </motion.div>
           </div>
           <div className="relative flex min-h-[390px] items-center justify-center lg:min-h-[560px]">
-            <div className="absolute h-[72%] w-[72%] rounded-full bg-amber-500/10 blur-3xl" />
-            <div className="absolute right-0 top-1/2 h-[78%] w-[86%] -translate-y-1/2 overflow-hidden rounded-[45%_45%_8%_8%] border border-amber-200/20 bg-neutral-950/40 shadow-2xl shadow-black/40">
-              <img
-                src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=85&w=1200"
-                srcSet="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=640 640w, https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=85&w=1200 1200w"
-                sizes="(max-width: 1024px) 90vw, 50vw"
-                fetchPriority="high"
-                alt="Close-up of a PrestigeTime mechanical watch"
-                className="h-full w-full object-cover object-center"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#0c0b09]/45 via-transparent to-amber-100/10" />
-            </div>
-            <div className="absolute bottom-4 left-0 z-10 border-l-2 border-amber-500 bg-neutral-950/80 px-4 py-3 backdrop-blur-sm sm:bottom-10 sm:left-4">
-              <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-amber-300">PT / 01</p>
-              <p className="mt-1 text-xs text-neutral-300">The automatic collection</p>
+            <div className="absolute inset-0 rounded-[2rem] border border-amber-500/10 bg-neutral-950/30" />
+            <div className="relative z-10 max-w-md rounded-2xl border border-neutral-800 bg-neutral-900/70 p-8 shadow-2xl shadow-black/30">
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-amber-400">PT / 01</p>
+              <h3 className="mt-4 font-serif text-3xl text-white">The automatic collection</h3>
+              <p className="mt-3 text-sm leading-relaxed text-neutral-300">
+                Precision engineered for collectors who value subtle luxury, enduring craftsmanship, and refined everyday wear.
+              </p>
             </div>
           </div>
         </div>
@@ -866,21 +857,7 @@ export default function Home({ setSelectedCategory }: HomeProps) {
 
       {/* 5. Call to Action */}
       <section className="relative py-24 bg-neutral-950 text-white overflow-hidden text-center flex items-center justify-center">
-        <div className="absolute inset-0 opacity-15">
-          <img
-            src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=75&w=1200"
-            srcSet="https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=70&w=640 640w,
-                    https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=75&w=1200 1200w"
-            sizes="100vw"
-            loading="lazy"
-            decoding="async"
-            alt="Macro watch dial mechanics"
-            className="w-full h-full object-cover filter contrast-125 select-none pointer-events-none"
-            referrerPolicy="no-referrer"
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-neutral-950 via-neutral-950/80 to-neutral-950" />
-        
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(184,134,64,0.12),transparent_48%)]" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10 space-y-6">
           <h2 className="font-serif text-3xl sm:text-5xl font-semibold tracking-tight text-white uppercase">
             Time Is Precious. <span className="text-amber-500">Wear It With Prestige.</span>
