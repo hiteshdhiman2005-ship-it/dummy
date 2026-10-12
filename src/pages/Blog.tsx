@@ -35,28 +35,9 @@ export default function Blog() {
   return (
     <div id="blog-page-container" className="bg-neutral-900 text-neutral-100 font-sans min-h-screen">
       
-      {/* Page Header banner */}
-      <section className="relative py-20 bg-neutral-950 border-b border-neutral-800 flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src={getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1547996160-81dfa63595aa", 1600, 90)}
-            srcSet={`${getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1547996160-81dfa63595aa", 800, 85)} 800w,
-                    ${getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1547996160-81dfa63595aa", 1200, 90)} 1200w,
-                    ${getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1547996160-81dfa63595aa", 1600, 92)} 1600w`}
-            sizes="100vw"
-            fetchPriority="high"
-            loading="eager"
-            decoding="async"
-            width={1600}
-            height={900}
-            alt="Luxury watch editorial background"
-            className="w-full h-full object-cover object-center scale-105"
-            referrerPolicy="no-referrer"
-          />
-        </div>
-        <div className="absolute inset-0 bg-linear-to-t from-neutral-950 via-neutral-950/70 to-neutral-950" />
-        
-        <div className="relative text-center z-10 max-w-4xl mx-auto px-4">
+      {/* Blog Feed Grid Section */}
+      <section className="pt-16 pb-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-12 text-center">
           <h1 className="font-serif text-4xl sm:text-5xl font-black tracking-wide text-white mb-3">
             LATEST <span className="text-amber-500">ARTICLES</span>
           </h1>
@@ -67,8 +48,7 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* Blog Feed Grid Section */}
-      <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="pb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {BLOG_POSTS.map((post, idx) => (
             <motion.div
