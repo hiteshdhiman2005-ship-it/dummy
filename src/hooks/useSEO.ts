@@ -56,7 +56,7 @@ export function useSEO({ title, description, keywords, schema, image, indexable 
       }
     }
 
-    const baseUrl = window.location.origin || 'https://prestigetime.vercel.app';
+    const baseUrl = window.location.origin || 'https://dummy-eight-inky.vercel.app';
     const cleanPath = window.location.pathname === '/' ? '' : window.location.pathname;
     const canonicalUrl = `${baseUrl}${cleanPath}`;
 
