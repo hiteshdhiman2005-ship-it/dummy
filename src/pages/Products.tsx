@@ -334,7 +334,7 @@ export default function Products({
               Premium Horological Brand Selection
             </span>
             <p className="text-neutral-300 text-xs sm:text-sm font-light leading-relaxed">
-              Our curated boutique directory includes detailed style references for iconic brands. Whether you are seeking robust, trend-forward <span className="text-white font-medium">Fossil watches for men</span> for weekend wear, highly energetic and durable <span className="text-white font-medium">Fastrack watches for men</span> for active lifestyles, or investments in time-tested masterpieces like vintage <span className="text-white font-medium">Rolex watches for men</span>, PrestigeTime provides the catalog and guidance to make an informed, timeless selection.
+              Discover a curated boutique collection of premium watches for men, from refined dress pieces and everyday luxury models to rugged sports designs and statement-making timepieces. Our selection is built for collectors, professionals, and style-conscious buyers looking for elegant craftsmanship, dependable performance, and timeless appeal across iconic watch brands.
             </p>
           </div>
 
