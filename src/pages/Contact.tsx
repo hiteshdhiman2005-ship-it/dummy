@@ -137,7 +137,7 @@ export default function Contact() {
               </h2>
               <div className="h-0.5 w-16 bg-amber-500 rounded" />
               <p className="text-neutral-300 text-sm font-light leading-relaxed">
-                Connect directly with our boutique sales specialists, historical horology curators, or corporate customer care. If you are searching for a premium <span className="text-white font-medium">watch store near me</span> or want to securely <span className="text-white font-medium">buy watches online store</span> orders, you can easily <span className="text-white font-medium">contact watch customer service</span> using our direct lines or the secure contact form below.
+                Connect directly with our boutique sales specialists, historical horology curators, or corporate customer care. If you are searching for a premium watch store in your area or want to securely buy watches online, you can easily contact our customer service team using our direct lines or the secure contact form below.
               </p>
             </div>
 
