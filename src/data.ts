@@ -119,20 +119,6 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: '5 min read'
   },
   {
-    id: 'b2',
-    title: 'How to Choose the Perfect Watch',
-    summary: 'When selecting a watch, consider your lifestyle, budget, movement type, and preferred design.',
-    content: [
-      'Finding the perfect watch is a deeply personal journey. First, evaluate your daily lifestyle. Are you primarily in business meetings and formal events, or are you tracking outdoor workouts and swimming? A dress watch like the Prestige Classic Heritage excels under a suit cuff, while the Sport X is built to withstand extreme mechanical shocks and underwater depths.',
-      'Your budget is the next guide. Mechanical and automatic watches command higher premiums due to the complexity of micro-mechanical engineering and artisan labor. Quartz and digital smartwatches offer unmatched convenience, precision accuracy, and a lower cost of ownership.',
-      'Lastly, check the dimensions on your wrist. Case diameter (typically between 38mm to 44mm) and thickness decide how a timepiece wears. Try contrasting metal tones and leather textures against your usual wardrobe choices to select a watch that becomes an extension of your own identity.'
-    ],
-    publishedDate: 'February 10, 2026',
-    image: 'https://images.unsplash.com/photo-1495856458685-61c1a201854c?auto=format&fit=crop&q=80&w=800',
-    author: 'James Sterling',
-    readTime: '4 min read'
-  },
-  {
     id: 'b3',
     title: 'Automatic vs Quartz: Best Automatic Watches Under 1000',
     summary: 'Understanding the differences between automatic and quartz watches can help you find the best automatic watches under 1000 for your collection.',
