@@ -345,20 +345,10 @@ export default function Home({ setSelectedCategory }: HomeProps) {
               <p className="text-neutral-400 text-sm leading-relaxed max-w-md">
                 Every timepiece in our collections—from independent watchmaking brands to custom automatic watches—represents an investment in meticulous calibration. We hand-select premium watch designers globally to provide an unparalleled ownership experience.
               </p>
-              <div className="relative rounded-xl overflow-hidden h-48 border border-neutral-800">
-                <img
-                  src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?auto=format&fit=crop&q=80&w=800"
-                  loading="lazy"
-                  decoding="async"
-                  alt="Precision gears Close-Up"
-                  className="w-full h-full object-cover filter brightness-[0.5] grayscale hover:brightness-[0.6] transition-all duration-500"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 flex items-center justify-center p-4">
-                  <div className="text-center">
-                    <span className="font-serif text-3xl font-bold text-amber-400 block mb-0.5">PT-100</span>
-                    <span className="text-xs uppercase tracking-wider text-neutral-300 font-medium">Calibrated Movement</span>
-                  </div>
+              <div className="rounded-xl border border-neutral-800 bg-neutral-950/60 p-5 text-sm text-neutral-300">
+                <div className="text-center">
+                  <span className="font-serif text-3xl font-bold text-amber-400 block mb-0.5">PT-100</span>
+                  <span className="text-xs uppercase tracking-wider text-neutral-300 font-medium">Calibrated Movement</span>
                 </div>
               </div>
             </div>
