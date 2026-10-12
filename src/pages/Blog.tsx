@@ -37,20 +37,24 @@ export default function Blog() {
       
       {/* Page Header banner */}
       <section className="relative py-20 bg-neutral-950 border-b border-neutral-800 flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0">
           <img
-            src={getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1547996160-81dfa63595aa", 1200, 75)}
-            srcSet={`${getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1547996160-81dfa63595aa", 640, 70)} 640w,
-                    ${getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1547996160-81dfa63595aa", 1200, 75)} 1200w`}
+            src={getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1547996160-81dfa63595aa", 1600, 90)}
+            srcSet={`${getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1547996160-81dfa63595aa", 800, 85)} 800w,
+                    ${getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1547996160-81dfa63595aa", 1200, 90)} 1200w,
+                    ${getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1547996160-81dfa63595aa", 1600, 92)} 1600w`}
             sizes="100vw"
             fetchPriority="high"
+            loading="eager"
             decoding="async"
-            alt="Time gears background"
-            className="w-full h-full object-cover object-center scale-105 filter blur-xs"
+            width={1600}
+            height={900}
+            alt="Luxury watch editorial background"
+            className="w-full h-full object-cover object-center scale-105"
             referrerPolicy="no-referrer"
           />
         </div>
-        <div className="absolute inset-0 bg-linear-to-t from-neutral-950 via-neutral-950/80 to-neutral-950" />
+        <div className="absolute inset-0 bg-linear-to-t from-neutral-950 via-neutral-950/70 to-neutral-950" />
         
         <div className="relative text-center z-10 max-w-4xl mx-auto px-4">
           <h1 className="font-serif text-4xl sm:text-5xl font-black tracking-wide text-white mb-3">
@@ -82,61 +86,62 @@ export default function Blog() {
               tabIndex={0}
               role="button"
               aria-label={`Read article: ${post.title}`}
-              className="group bg-neutral-950 border border-neutral-800/80 rounded-xl overflow-hidden hover:border-amber-500/20 transition-all duration-300 cursor-pointer flex flex-col justify-between h-full shadow-lg focus:outline-none focus:ring-2 focus:ring-amber-500/50"
+              className="group relative flex h-full cursor-pointer flex-col justify-between overflow-hidden rounded-2xl border border-neutral-800/80 bg-neutral-950 shadow-[0_18px_50px_rgba(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-1 hover:border-amber-500/30 hover:shadow-[0_25px_80px_rgba(217,149,60,0.12)] focus:outline-none focus:ring-2 focus:ring-amber-500/50"
             >
               <div>
-                {/* Article Card Image */}
-                <div className="relative aspect-video overflow-hidden bg-neutral-900 border-b border-neutral-800">
+                <div className="relative aspect-[16/10] overflow-hidden border-b border-neutral-800 bg-neutral-900">
                   <img
-                    src={getOptimizedUnsplashUrl(post.image, 500)}
-                    srcSet={`${getOptimizedUnsplashUrl(post.image, 380)} 380w, ${getOptimizedUnsplashUrl(post.image, 600)} 600w`}
+                    src={getOptimizedUnsplashUrl(post.image, idx === 0 ? 1200 : 800, idx === 0 ? 90 : 85)}
+                    srcSet={`${getOptimizedUnsplashUrl(post.image, idx === 0 ? 480 : 360, idx === 0 ? 90 : 85)} ${idx === 0 ? 480 : 360}w, ${getOptimizedUnsplashUrl(post.image, idx === 0 ? 800 : 600, idx === 0 ? 90 : 85)} ${idx === 0 ? 800 : 600}w, ${getOptimizedUnsplashUrl(post.image, idx === 0 ? 1200 : 800, idx === 0 ? 90 : 85)} ${idx === 0 ? 1200 : 800}w`}
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    loading="lazy"
+                    loading={idx === 0 ? 'eager' : 'lazy'}
+                    fetchPriority={idx === 0 ? 'high' : undefined}
                     decoding="async"
+                    width={idx === 0 ? 1200 : 800}
+                    height={idx === 0 ? 750 : 500}
                     alt={post.title}
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 filter brightness-[0.8]"
+                    className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 brightness-[0.9]"
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/60 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-neutral-950/15 to-transparent" />
+                  <span className="absolute left-4 top-4 rounded-full border border-amber-500/30 bg-neutral-950/75 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.2em] text-amber-400 backdrop-blur-sm">
+                    Editorial
+                  </span>
                 </div>
 
-                {/* Article Card Details */}
-                <div className="p-6 space-y-3.5">
-                  {/* Metadata line */}
-                  <div className="flex items-center space-x-4 text-neutral-500 text-[10px] sm:text-xs">
-                    <span className="flex items-center space-x-1">
+                <div className="space-y-4 p-6">
+                  <div className="flex items-center gap-4 text-[10px] uppercase tracking-[0.16em] text-neutral-500">
+                    <span className="flex items-center gap-1.5">
                       <Calendar className="h-3.5 w-3.5 text-amber-500" />
                       <span>{post.publishedDate}</span>
                     </span>
-                    <span className="flex items-center space-x-1">
+                    <span className="flex items-center gap-1.5">
                       <Clock className="h-3.5 w-3.5 text-amber-500" />
                       <span>{post.readTime}</span>
                     </span>
                   </div>
 
-                  <h3 className="font-serif text-lg sm:text-xl font-bold text-white group-hover:text-amber-400 transition-colors line-clamp-2">
+                  <h3 className="font-serif text-xl font-bold leading-snug text-white transition-colors duration-300 group-hover:text-amber-400">
                     {post.title}
                   </h3>
 
-                  <p className="text-neutral-400 text-xs font-light line-clamp-3 leading-relaxed">
+                  <p className="text-sm leading-relaxed text-neutral-400 line-clamp-3">
                     {post.summary}
                   </p>
                 </div>
               </div>
 
-              {/* Read button card bottom */}
-              <div className="p-6 pt-0 border-t border-neutral-900/60 mt-4 flex items-center justify-between">
-                <span className="text-neutral-500 text-xs font-mono font-medium flex items-center space-x-1">
-                  <User className="h-3 px-0.5 text-amber-500" />
-                  <span>By {post.author.split(' ')[0]}</span>
+              <div className="mt-auto flex items-center justify-between border-t border-neutral-900/80 px-6 py-4">
+                <span className="flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.14em] text-neutral-400">
+                  <User className="h-3.5 w-3.5 text-amber-500" />
+                  <span>{post.author.split(' ')[0]}</span>
                 </span>
-                
-                <span className="text-[10px] sm:text-xs text-amber-500 font-bold uppercase tracking-widest flex items-center space-x-1 group-hover:text-amber-400 transition-colors">
-                  <span>Read Article</span>
-                  <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+
+                <span className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-amber-400 transition-colors duration-300 group-hover:text-amber-300">
+                  <span>Read</span>
+                  <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                 </span>
               </div>
-
             </motion.div>
           ))}
         </div>
@@ -180,14 +185,18 @@ export default function Blog() {
               {/* Large Image header */}
               <div className="relative h-64 sm:h-80 w-full overflow-hidden shrink-0 border-b border-neutral-800">
                 <img
-                  src={getOptimizedUnsplashUrl(activePost.image, 800, 75)}
-                  srcSet={`${getOptimizedUnsplashUrl(activePost.image, 400, 70)} 400w,
-                          ${getOptimizedUnsplashUrl(activePost.image, 800, 75)} 800w`}
-                  sizes="(max-width: 640px) 100vw, 800px"
-                  loading="lazy"
+                  src={getOptimizedUnsplashUrl(activePost.image, 1400, 90)}
+                  srcSet={`${getOptimizedUnsplashUrl(activePost.image, 600, 85)} 600w,
+                          ${getOptimizedUnsplashUrl(activePost.image, 1000, 90)} 1000w,
+                          ${getOptimizedUnsplashUrl(activePost.image, 1400, 92)} 1400w`}
+                  sizes="(max-width: 640px) 100vw, 1000px"
+                  loading="eager"
+                  fetchPriority="high"
                   decoding="async"
+                  width={1400}
+                  height={900}
                   alt={activePost.title}
-                  className="w-full h-full object-cover filter brightness-[0.7]"
+                  className="w-full h-full object-cover brightness-[0.75]"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/30 to-transparent" />
