@@ -178,7 +178,6 @@ export default function Products({
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {sortedProducts.map((p, idx) => {
               const isWishlisted = wishlist.includes(p.id);
-              const hideProductImage = p.name === 'Prestige Royal Automatic';
               return (
                 <motion.div
                   key={p.id}
@@ -189,27 +188,16 @@ export default function Products({
                 >
                   {/* Watch Card Image Wrapper */}
                   <div className="relative aspect-square overflow-hidden bg-neutral-900 border-b border-neutral-800">
-                    {hideProductImage ? (
-                      <div className="flex h-full items-center justify-center bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-800 px-6 text-center">
-                        <div>
-                          <span className="mb-2 block text-[10px] font-mono font-bold uppercase tracking-[0.26em] text-amber-400">
-                            {p.category} Series
-                          </span>
-                          <span className="font-serif text-2xl font-semibold text-white">{p.name}</span>
-                        </div>
-                      </div>
-                    ) : (
-                      <img
-                        src={getOptimizedUnsplashUrl(p.image, 500)}
-                        srcSet={`${getOptimizedUnsplashUrl(p.image, 380)} 380w, ${getOptimizedUnsplashUrl(p.image, 600)} 600w`}
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        loading="lazy"
-                        decoding="async"
-                        alt={p.name}
-                        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 filter brightness-[0.9] group-hover:brightness-100"
-                        referrerPolicy="no-referrer"
-                      />
-                    )}
+                    <img
+                      src={getOptimizedUnsplashUrl(p.image, 500)}
+                      srcSet={`${getOptimizedUnsplashUrl(p.image, 380)} 380w, ${getOptimizedUnsplashUrl(p.image, 600)} 600w`}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      loading="lazy"
+                      decoding="async"
+                      alt={p.name}
+                      className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 filter brightness-[0.9] group-hover:brightness-100"
+                      referrerPolicy="no-referrer"
+                    />
                     
                     {/* Category overlay label */}
                     <span className="absolute top-4 left-4 bg-neutral-950/90 border border-neutral-800 text-amber-400 font-mono text-[9px] font-bold tracking-widest uppercase p-1.5 px-3 rounded-md">
@@ -389,25 +377,14 @@ export default function Products({
 
               {/* Left visual column */}
               <div className="col-span-12 md:col-span-5 bg-neutral-950 border-b md:border-b-0 md:border-r border-neutral-800 h-96 md:h-auto min-h-[300px]">
-                {selectedProduct.name === 'Prestige Royal Automatic' ? (
-                  <div className="flex h-full min-h-[300px] items-center justify-center bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-800 px-6 text-center">
-                    <div>
-                      <span className="mb-2 block text-[10px] font-mono font-bold uppercase tracking-[0.26em] text-amber-400">
-                        {selectedProduct.category} Series
-                      </span>
-                      <span className="font-serif text-3xl font-semibold text-white">{selectedProduct.name}</span>
-                    </div>
-                  </div>
-                ) : (
-                  <img
-                    src={selectedProduct.image}
-                    loading="lazy"
-                    decoding="async"
-                    alt={selectedProduct.name}
-                    className="w-full h-full object-cover filter brightness-[0.95]"
-                    referrerPolicy="no-referrer"
-                  />
-                )}
+                <img
+                  src={selectedProduct.image}
+                  loading="lazy"
+                  decoding="async"
+                  alt={selectedProduct.name}
+                  className="w-full h-full object-cover filter brightness-[0.95]"
+                  referrerPolicy="no-referrer"
+                />
               </div>
 
               {/* Right descriptions specifications column */}

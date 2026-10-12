@@ -22,26 +22,6 @@ export const PRODUCTS: Product[] = [
     featured: true,
   },
   {
-    id: '2',
-    name: 'Prestige Royal Automatic',
-    price: 1299,
-    description: 'Luxury automatic movement with premium leather strap and elegant dial design.',
-    category: 'Luxury',
-    image: 'https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&q=80&w=800',
-    features: [
-      'Caliber PT-100 Self-Winding automatic movement with 42-hour power reserve',
-      'Exhibition display case back showcasing internal gear craftsmanship',
-      'Genuine full-grain alligator-style brown leather strap with deployment clasp',
-      'Polished 18K rose gold-plated bezel and crown accents',
-      'Water resistant to 50m (5 ATM)'
-    ],
-    movement: 'Self-Winding Swiss Automatic (Mechanical)',
-    waterResistance: '50m (5 ATM)',
-    glassType: 'Arched Sapphire Crystal',
-    strapMaterial: 'Premium Genuine Leather (Brown)',
-    featured: true,
-  },
-  {
     id: '3',
     name: 'Prestige Sport X',
     price: 499,
