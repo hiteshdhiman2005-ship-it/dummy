@@ -33,16 +33,17 @@ export default function Products({
 }: ProductsProps) {
   // SEO Configuration for Horology Services and Curation
   useSEO({
-    title: 'Fossil, Fastrack & Rolex Watches for Men | PrestigeTime Collection',
-    description: 'Shop our premium catalog of Fossil watches for men, reliable Fastrack watches for men, and classic luxury Rolex watches for men. Browse our professional horology curation.',
+    title: 'Luxury Watches for Men | Premium Watch Services & Collection',
+    description: 'Explore luxury watches for men, premium automatic timepieces, sports watches, and expert watch services including care, calibration, and personal styling guidance.',
     keywords: [
-      'fossil watches for men',
-      'fastrack watches for men',
-      'rolex watches for men',
-      'sport watches',
+      'luxury watches for men',
+      'premium watches for men',
+      'watch services',
+      'automatic watches',
+      'sports watches',
       'smart watches',
       'classic watches',
-      'timepieces'
+      'buy watches online'
     ],
   });
 
@@ -115,11 +116,11 @@ export default function Products({
         
         <div className="relative text-center z-10 max-w-4xl mx-auto px-4">
           <h1 className="font-serif text-4xl sm:text-5xl font-black tracking-wide text-white mb-3">
-            OUR <span className="text-amber-500">SERVICES & COLLECTION</span>
+            LUXURY <span className="text-amber-500">WATCHES FOR MEN</span>
           </h1>
           <div className="h-0.5 w-16 bg-amber-500 mx-auto rounded" />
           <p className="mt-4 text-neutral-400 text-sm sm:text-base font-light tracking-wide uppercase">
-            Meticulously constructed mechanical & digital movements
+            Premium timepieces & expert watch services
           </p>
         </div>
       </section>
