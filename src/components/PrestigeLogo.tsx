@@ -32,19 +32,19 @@ export default function PrestigeLogo({
       <div className={`relative ${iconSize} shrink-0 transition-transform duration-500 ease-out group-hover:scale-105 active:scale-95`}>
         
         {/* Outer Radiant Glow */}
-        <div className="absolute inset-0 rounded-full bg-blue-500/20 blur-[6px] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div className="absolute inset-0 rounded-full bg-amber-500/20 blur-[6px] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         
         {/* SVG Watch Escapement & Chronometer Dial */}
         <svg
           viewBox="0 0 100 100"
-          className="w-full h-full drop-shadow-[0_2px_8px_rgba(37,99,235,0.25)] group-hover:drop-shadow-[0_4px_16px_rgba(37,99,235,0.45)] transition-all duration-500"
+          className="w-full h-full drop-shadow-[0_2px_8px_rgba(193,147,107,0.25)] group-hover:drop-shadow-[0_4px_16px_rgba(193,147,107,0.45)] transition-all duration-500"
         >
           {/* Outer Polished Platinum Ring */}
           <circle
             cx="50"
             cy="50"
             r="46"
-            className="fill-none stroke-blue-200/90 dark:stroke-slate-800"
+            className="fill-none stroke-amber-200/90"
             strokeWidth="3.5"
           />
 
@@ -53,12 +53,12 @@ export default function PrestigeLogo({
             cx="50"
             cy="50"
             r="42"
-            className="fill-[#0c1322] stroke-blue-500/30"
+            className="fill-[#1A1A1A] stroke-amber-500/30"
             strokeWidth="6"
           />
 
           {/* Chronometric Dial Millisecond Ticks */}
-          <g className="stroke-blue-400/40" strokeWidth="1.5">
+          <g className="stroke-amber-400/40" strokeWidth="1.5">
             <line x1="50" y1="8" x2="50" y2="13" />
             <line x1="50" y1="92" x2="50" y2="87" />
             <line x1="8" y1="50" x2="13" y2="50" />
@@ -76,7 +76,7 @@ export default function PrestigeLogo({
               cx="50"
               cy="50"
               r="24"
-              className="fill-none stroke-[#2563EB]/50"
+              className="fill-none stroke-[#C1936B]/50"
               strokeWidth="2"
             />
             
@@ -94,7 +94,7 @@ export default function PrestigeLogo({
                   y1={y1}
                   x2={x2}
                   y2={y2}
-                  className="stroke-[#2563EB]"
+                  className="stroke-[#C1936B]"
                   strokeWidth="2.5"
                   strokeLinecap="round"
                 />
@@ -113,7 +113,7 @@ export default function PrestigeLogo({
                   y1="50"
                   x2={x2}
                   y2={y2}
-                  className="stroke-blue-400"
+                  className="stroke-amber-300"
                   strokeWidth="1.5"
                 />
               );
@@ -125,7 +125,7 @@ export default function PrestigeLogo({
             cx="50"
             cy="50"
             r="4.5"
-            className="fill-red-500 stroke-white"
+            className="fill-[#5A1827] stroke-amber-100"
             strokeWidth="1"
           />
 
@@ -163,7 +163,7 @@ export default function PrestigeLogo({
               y1="62"
               x2="50"
               y2="12"
-              className="stroke-[#60a5fa]"
+              className="stroke-[#D8B38F]"
               strokeWidth="1"
             />
             {/* Elegant balance circle on tail */}
@@ -171,13 +171,13 @@ export default function PrestigeLogo({
               cx="50"
               cy="62"
               r="2"
-              className="fill-[#60a5fa]"
+              className="fill-[#D8B38F]"
             />
           </g>
         </svg>
 
         {/* Floating Mini Sparkle Star Badge */}
-        <div className="absolute -top-1 -right-1 bg-[#2563EB] text-white p-0.5 rounded-full border border-blue-400 shadow-lg scale-75 group-hover:scale-100 group-hover:rotate-[15deg] transition-all duration-500">
+        <div className="absolute -top-1 -right-1 bg-[#5A1827] text-white p-0.5 rounded-full border border-amber-300 shadow-lg scale-75 group-hover:scale-100 group-hover:rotate-[15deg] transition-all duration-500">
           <svg className="w-2.5 h-2.5 fill-white" viewBox="0 0 24 24">
             <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z" />
           </svg>
@@ -191,13 +191,13 @@ export default function PrestigeLogo({
             PRESTIGE
           </span>
           {/* Golden Gilded Trademark Pin */}
-          <span className="text-[9px] font-sans font-extrabold text-[#2563EB] ml-0.5 tracking-tighter align-super">
+          <span className="text-[9px] font-sans font-extrabold text-amber-600 ml-0.5 tracking-tighter align-super">
             ®
           </span>
         </div>
         
         {showSubtitle && (
-          <span className="text-[9px] tracking-[0.24em] font-sans font-semibold uppercase text-blue-400 group-hover:text-blue-300 transition-colors duration-300 mt-1 pl-[2px]">
+          <span className="text-[9px] tracking-[0.24em] font-sans font-semibold uppercase text-amber-700 group-hover:text-amber-600 transition-colors duration-300 mt-1 pl-[2px]">
             GENÈVE • TIME
           </span>
         )}
