@@ -5,55 +5,60 @@
   --font-serif: "Cinzel", Georgia, Cambria, "Times New Roman", Times, serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 
-  /* Modern white, slate, midnight, and electric cobalt palette */
+  /* Sport and smartwatch obsidian, cool gray, ice blue, and orange palette */
   --color-neutral-50: #ffffff;
-  --color-neutral-100: #4a4a4a;
-  --color-neutral-200: #5c5c5c;
-  --color-neutral-300: #707070;
-  --color-neutral-400: #858585;
-  --color-neutral-450: #929292;
-  --color-neutral-500: #a3a3a3;
-  --color-neutral-600: #d1d1d1;
-  --color-neutral-700: #e0e0e0;
-  --color-neutral-800: #e6e6e6;
-  --color-neutral-805: #ebebeb;
-  --color-neutral-810: #f0f0f0;
-  --color-neutral-850: #f7f7f7;
-  --color-neutral-900: #ffffff;
-  --color-neutral-905: #ffffff;
-  --color-neutral-950: #0e0326;
+  --color-neutral-100: #a0aab8;
+  --color-neutral-200: #c2cad4;
+  --color-neutral-300: #b0bac8;
+  --color-neutral-400: #a0aab8;
+  --color-neutral-450: #8b96a5;
+  --color-neutral-500: #768293;
+  --color-neutral-600: #596575;
+  --color-neutral-700: #414a56;
+  --color-neutral-800: #303741;
+  --color-neutral-805: #262c34;
+  --color-neutral-810: #20252c;
+  --color-neutral-850: #191d22;
+  --color-neutral-900: #0d0d0d;
+  --color-neutral-905: #111418;
+  --color-neutral-950: #08090a;
 
-  /* Midnight blue anchors dark surfaces and secondary brand elements. */
-  --color-sapphire-50: #f0eff3;
-  --color-sapphire-100: #e1dfe8;
-  --color-sapphire-500: #0e0326;
-  --color-sapphire-600: #0b0220;
-  --color-sapphire-900: #0e0326;
+  /* Deep graphite surfaces complement the obsidian base. */
+  --color-sapphire-50: #e9edf2;
+  --color-sapphire-100: #cbd3dd;
+  --color-sapphire-500: #242a32;
+  --color-sapphire-600: #191e24;
+  --color-sapphire-900: #101215;
 
-  --color-emerald-500: #0e0326;
+  --color-emerald-500: #0d9488;
 
-  /* Electric cobalt highlights and primary actions */
-  --color-amber-50: #eff6ff;
-  --color-amber-100: #dbeafe;
-  --color-amber-200: #bfdbfe;
-  --color-amber-300: #93c5fd;
-  --color-amber-400: #60a5fa;
-  --color-amber-500: #2563eb;
-  --color-amber-600: #1d4ed8;
-  --color-amber-700: #1e40af;
-  --color-amber-800: #1e3a8a;
-  --color-amber-900: #172554;
-  --color-amber-950: #0e0326;
+  /* Ice blue brand accents */
+  --color-amber-50: #f0f9ff;
+  --color-amber-100: #e0f2fe;
+  --color-amber-200: #bae6fd;
+  --color-amber-300: #7dd3fc;
+  --color-amber-400: #38bdf8;
+  --color-amber-500: #38bdf8;
+  --color-amber-600: #0ea5e9;
+  --color-amber-700: #0284c7;
+  --color-amber-800: #0369a1;
+  --color-amber-900: #0c4a6e;
+  --color-amber-950: #082f49;
 }
 
-/* The legacy white utility is used for headings on light surfaces. */
+/* Keep white utility text readable on the dark theme. */
 .text-white {
-  color: var(--color-neutral-100) !important;
+  color: var(--color-neutral-50) !important;
 }
 
-/* Keep neutral-950 cards light; translucent neutral-950 overlays stay unchanged. */
-.bg-neutral-950 {
-  background-color: var(--color-neutral-50) !important;
+/* Use energetic orange for primary actions, with ice blue reserved for accents. */
+.bg-amber-500.hover\:bg-amber-400 {
+  background-color: #ff5722 !important;
+  color: #ffffff !important;
+}
+
+.bg-amber-500.hover\:bg-amber-400:hover {
+  background-color: #e64a19 !important;
 }
 
 .bg-sapphire-900 .text-white {
@@ -62,12 +67,14 @@
 
 .bg-sapphire-900 .text-neutral-300,
 .bg-sapphire-900 .text-neutral-400 {
-  color: #d4d4d4 !important;
+  color: #a0aab8 !important;
 }
 
-/* Preserve readable text on the dark brand surfaces and cobalt buttons. */
+/* Preserve readable text on the orange buttons and dark brand surfaces. */
 .bg-amber-500.text-neutral-950,
 .bg-amber-400.text-neutral-950,
+.bg-amber-500.hover\:bg-amber-400,
+.bg-amber-400.hover\:bg-amber-300,
 .bg-red-500.text-white,
 .bg-sapphire-500.text-white,
 .bg-sapphire-600.text-white,
@@ -86,7 +93,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.02em;
 }
 
-/* Ensure cobalt-colored titles stay striking */
+/* Ensure ice-blue titles stay striking */
 h1 .text-amber-500,
 h2 .text-amber-500,
 h3 .text-amber-500,
@@ -107,7 +114,7 @@ input:focus, textarea:focus, select:focus {
   border-color: var(--color-amber-400) !important;
 }
 
-/* Keep image overlays readable against the clean modern palette */
+/* Keep image overlays readable against the dark sport palette */
 .brightness-\[0\.6\] {
   filter: brightness(0.7);
 }
@@ -123,19 +130,19 @@ input:focus, textarea:focus, select:focus {
 }
 
 .gold-shimmer-bg {
-  background: linear-gradient(90deg, #0e0326 20%, #2563eb 50%, #0e0326 80%);
+  background: linear-gradient(90deg, #0d0d0d 20%, #38bdf8 50%, #0d0d0d 80%);
   background-size: 200% 100%;
   animation: goldShimmer 3s infinite linear;
 }
 
 .titan-card-glow {
-  box-shadow: 0 4px 20px -2px rgba(14, 3, 38, 0.08), 0 2px 8px -1px rgba(14, 3, 38, 0.05);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.3), 0 2px 8px -1px rgba(0, 0, 0, 0.2);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   border-color: var(--color-neutral-800) !important;
 }
 
 .titan-card-glow:hover {
-  box-shadow: 0 12px 30px -4px rgba(37, 99, 235, 0.2), 0 4px 12px -2px rgba(37, 99, 235, 0.14);
+  box-shadow: 0 12px 30px -4px rgba(56, 189, 248, 0.2), 0 4px 12px -2px rgba(56, 189, 248, 0.14);
   border-color: var(--color-amber-500) !important;
-  background-color: var(--color-neutral-50) !important;
+  background-color: var(--color-neutral-905) !important;
 }
