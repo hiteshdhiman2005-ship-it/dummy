@@ -1,12 +1,12 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { Map, Compass, Watch, Tag, Landmark, BookOpen, Mail, Heart, ArrowRight } from 'lucide-react';
+import { Map, Compass, Watch, Landmark, BookOpen, Mail, Heart, ArrowRight } from 'lucide-react';
 import { useSEO } from '../hooks/useSEO';
 
 export default function Sitemap() {
   useSEO({
     title: 'Site Map & Directory | PrestigeTime',
-    description: 'Explore the complete directory of PrestigeTime. Navigate through our collections, custom services, brand heritages, and expert horological guides.',
+    description: 'Explore the complete directory of PrestigeTime. Navigate through our collections, brand heritage, and expert horological guides.',
     keywords: [
       'sitemap',
       'website directory',
@@ -19,7 +19,6 @@ export default function Sitemap() {
   const mainPages = [
     { name: 'Home Page', path: '/', desc: 'Our premium storefront featuring independent watchmaking brands, custom automatic watch design, and featured curators.', icon: <Compass className="h-4 w-4 text-amber-500" /> },
     { name: 'Products Catalog', path: '/products', desc: 'Browse and filter our comprehensive catalog of sports, luxury, classic, and smart calibers.', icon: <Watch className="h-4 w-4 text-amber-500" /> },
-    { name: 'Services & Calibration', path: '/services', desc: 'Expert restoration, mechanical timing calibration, and personalized collection advisory.', icon: <Tag className="h-4 w-4 text-amber-500" /> },
     { name: 'About Our Story', path: '/about', desc: 'Learn about our legacy, certified authentic luxury standards, and brand heritage.', icon: <Landmark className="h-4 w-4 text-amber-500" /> },
     { name: 'My Wishlist', path: '/wishlist', desc: 'Your saved items and custom-selected luxury sets ready for secure order checkout.', icon: <Heart className="h-4 w-4 text-amber-500" /> },
     { name: 'Horology Blog', path: '/blog', desc: 'Deep-dive editorials, mechanical maintenance guides, and trending watch style reviews.', icon: <BookOpen className="h-4 w-4 text-amber-500" /> },
@@ -117,7 +116,7 @@ export default function Sitemap() {
                 Main Navigational Directory
               </h2>
               <p className="text-neutral-400 text-sm max-w-2xl font-light">
-                Direct access routes to PrestigeTime's primary single-view screens, services, collections, and custom design labs.
+                Direct access routes to PrestigeTime's primary pages, collections, and custom design studio.
               </p>
             </div>
 

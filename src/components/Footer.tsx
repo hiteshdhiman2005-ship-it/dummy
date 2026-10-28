@@ -63,16 +63,6 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  id="footer-nav-services"
-                  to="/services"
-                  onClick={handleScrollToTop}
-                  className="hover:text-amber-400 hover:translate-x-1 transition-all duration-200 cursor-pointer text-left block text-neutral-300"
-                >
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link
                   id="footer-nav-about"
                   to="/about"
                   onClick={handleScrollToTop}

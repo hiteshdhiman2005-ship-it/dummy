@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Heart, ShoppingCart, Eye, Trash2, Info, Check, Watch } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useSEO } from '../hooks/useSEO';
-import { Product, PageType } from '../types';
+import { Product } from '../types';
 
 // Performance Optimizer: Dynamically resizes Unsplash image URLs for responsive screens
 function getOptimizedUnsplashUrl(url: string, width: number, quality = 75) {
@@ -233,7 +233,7 @@ export default function Wishlist({
               <div className="pt-2">
                 <button
                   id="wishlist-explore-btn"
-                  onClick={() => navigate('/services')}
+                  onClick={() => navigate('/products')}
                   className="px-8 py-3.5 bg-amber-500 hover:bg-amber-400 text-neutral-950 text-xs font-bold tracking-widest uppercase rounded transition-colors cursor-pointer inline-flex items-center space-x-2 focus:outline-none"
                 >
                   <Watch className="h-4 w-4 mr-1 pb-0.5" />

@@ -259,7 +259,7 @@ export default function Home({ setSelectedCategory }: HomeProps) {
 
   const handleCategoryClick = (category: 'Luxury' | 'Sports' | 'Smart' | 'Classic') => {
     setSelectedCategory(category);
-    navigate('/services');
+    navigate('/products');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -896,7 +896,7 @@ export default function Home({ setSelectedCategory }: HomeProps) {
               id="cta-shop-collection-btn"
               onClick={() => {
                 setSelectedCategory('All');
-                navigate('/services');
+                navigate('/products');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
               className="px-10 py-4 bg-amber-500 hover:bg-amber-400 text-neutral-950 hover:text-neutral-900 text-xs font-bold tracking-widest rounded transition-all duration-300 cursor-pointer shadow-lg shadow-amber-500/10 inline-flex items-center space-x-2"

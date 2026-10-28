@@ -31,14 +31,13 @@ export default function Products({
   wishlist,
   onToggleWishlist,
 }: ProductsProps) {
-  // SEO Configuration for Horology Services and Curation
+  // SEO configuration for the watch catalog
   useSEO({
-    title: 'Luxury Watches for Men | Premium Watch Services & Collection',
-    description: 'Explore luxury watches for men, premium automatic timepieces, sports watches, and expert watch services including care, calibration, and personal styling guidance.',
+    title: 'Luxury Watches for Men | Premium Watch Collection',
+    description: 'Explore luxury watches for men, premium automatic timepieces, sports watches, and classic designs selected for precision and lasting style.',
     keywords: [
       'luxury watches for men',
       'premium watches for men',
-      'watch services',
       'automatic watches',
       'sports watches',
       'smart watches',
@@ -120,7 +119,7 @@ export default function Products({
           </h1>
           <div className="h-0.5 w-16 bg-amber-500 mx-auto rounded" />
           <p className="mt-4 text-neutral-400 text-sm sm:text-base font-light tracking-wide uppercase">
-            Premium timepieces & expert watch services
+            Premium timepieces for every occasion
           </p>
         </div>
       </section>

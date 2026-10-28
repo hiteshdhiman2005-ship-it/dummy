@@ -1,6 +1,6 @@
 import { lazy, Suspense, useState, useEffect } from 'react';
 import { X, ShoppingBag, Plus, Minus, Trash2, ArrowRight, Lock, CheckCircle2 } from 'lucide-react';
-import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation, useNavigate } from 'react-router-dom';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -137,18 +137,7 @@ export default function App() {
               element={<Home setSelectedCategory={setSelectedCategory} />}
             />
             <Route path="/about" element={<About />} />
-            <Route
-              path="/services"
-              element={
-                <Products
-                  onAddToCart={handleAddToCart}
-                  selectedCategory={selectedCategory}
-                  setSelectedCategory={setSelectedCategory}
-                  wishlist={wishlist}
-                  onToggleWishlist={handleToggleWishlist}
-                />
-              }
-            />
+            <Route path="/services" element={<Navigate to="/products" replace />} />
             <Route
               path="/products"
               element={
@@ -356,7 +345,7 @@ export default function App() {
                           id="cart-browse-btn"
                           onClick={() => {
                             setIsCartOpen(false);
-                            navigate('/services');
+                            navigate('/products');
                           }}
                           className="px-5 py-2.5 bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 text-neutral-300 text-[10px] sm:text-xs font-bold tracking-widest uppercase rounded cursor-pointer transition-colors focus:outline-none"
                         >
