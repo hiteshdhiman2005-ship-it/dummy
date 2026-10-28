@@ -76,9 +76,9 @@ export default function Sitemap() {
       <section className="relative py-20 bg-neutral-950 border-b border-neutral-800 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img
-            src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=75&w=1200"
-            srcSet="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=70&w=640 640w,
-                    https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=75&w=1200 1200w"
+            src="https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?auto=format&fit=crop&q=75&w=1200"
+            srcSet="https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?auto=format&fit=crop&q=70&w=640 640w,
+                    https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?auto=format&fit=crop&q=75&w=1200 1200w"
             sizes="100vw"
             fetchPriority="high"
             alt="Mechanical gear setup"

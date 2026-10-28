@@ -49,9 +49,9 @@ export default function Wishlist({
       <section className="relative py-20 bg-neutral-950 border-b border-neutral-800 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img
-            src={getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1547996160-81dfa63595aa", 1200, 75)}
-            srcSet={`${getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1547996160-81dfa63595aa", 640, 70)} 640w,
-                    ${getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1547996160-81dfa63595aa", 1200, 75)} 1200w`}
+            src={getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1490367532201-b9bc1dc483f6", 1200, 75)}
+            srcSet={`${getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1490367532201-b9bc1dc483f6", 640, 70)} 640w,
+                    ${getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1490367532201-b9bc1dc483f6", 1200, 75)} 1200w`}
             sizes="100vw"
             fetchPriority="high"
             decoding="async"

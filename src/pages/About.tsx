@@ -64,9 +64,9 @@ export default function About() {
       <section className="relative py-20 bg-neutral-950 border-b border-neutral-800 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img
-            src={getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1509048191080-d2984bad6ae5", 1200, 75)}
-            srcSet={`${getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1509048191080-d2984bad6ae5", 640, 70)} 640w,
-                    ${getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1509048191080-d2984bad6ae5", 1200, 75)} 1200w`}
+            src={getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1434056886845-dac89ffe9b56", 1200, 75)}
+            srcSet={`${getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1434056886845-dac89ffe9b56", 640, 70)} 640w,
+                    ${getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1434056886845-dac89ffe9b56", 1200, 75)} 1200w`}
             sizes="100vw"
             fetchPriority="high"
             decoding="async"
@@ -119,9 +119,9 @@ export default function About() {
             {/* Right: Immersive Picture Panel */}
             <div className="relative rounded-xl overflow-hidden aspect-video lg:aspect-square group shadow-2xl border border-neutral-800">
               <img
-                src={getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3", 600, 75)}
-                srcSet={`${getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3", 400, 70)} 400w,
-                        ${getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3", 800, 75)} 800w`}
+                src={getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1523170335258-f5ed11844a49", 600, 75)}
+                srcSet={`${getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1523170335258-f5ed11844a49", 400, 70)} 400w,
+                        ${getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1523170335258-f5ed11844a49", 800, 75)} 800w`}
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 450px"
                 loading="lazy"
                 decoding="async"

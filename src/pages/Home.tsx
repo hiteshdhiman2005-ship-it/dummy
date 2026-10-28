@@ -89,7 +89,7 @@ export default function Home({ setSelectedCategory }: HomeProps) {
         '@type': 'Store',
         'name': 'PrestigeTime',
         'url': typeof window !== 'undefined' ? window.location.origin : 'https://prestigetime.com',
-        'image': 'https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&q=80&w=600',
+        'image': 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&q=80&w=600',
         'description': 'Shop premium watches for men, featuring independent watchmaking brands and custom automatic watches. Explore stylish, durable, and precise timepieces crafted for collectors.',
         'priceRange': '$$$',
         'address': {
@@ -174,25 +174,25 @@ export default function Home({ setSelectedCategory }: HomeProps) {
       title: 'Luxury Watches',
       slug: 'Luxury' as const,
       desc: 'Premium watches designed for professionals and collectors.',
-      image: 'https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&q=80&w=600',
+      image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&q=80&w=600',
     },
     {
       title: 'Sports Watches',
       slug: 'Sports' as const,
       desc: 'Built for adventure, durability, and performance.',
-      image: 'https://images.unsplash.com/photo-1539874754764-5a96559165b0?auto=format&fit=crop&q=80&w=600',
+      image: 'https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?auto=format&fit=crop&q=80&w=600',
     },
     {
       title: 'Smart Watches',
       slug: 'Smart' as const,
       desc: 'Modern technology combined with elegant design.',
-      image: 'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&q=80&w=600',
+      image: 'https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&q=80&w=600',
     },
     {
       title: 'Classic Watches',
       slug: 'Classic' as const,
       desc: 'Timeless designs that never go out of fashion.',
-      image: 'https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&q=80&w=600',
+      image: 'https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?auto=format&fit=crop&q=80&w=600',
     }
   ];
 
@@ -223,9 +223,9 @@ export default function Home({ setSelectedCategory }: HomeProps) {
       alt: 'Luxury men’s wristwatch with metallic case and premium bracelet',
     },
     {
-      title: 'Smart watch with modern styling',
-      image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=900',
-      alt: 'Modern smart watch for men with premium finish and clean design',
+      title: 'Luxury watch with refined modern styling',
+      image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&q=80&w=900',
+      alt: 'Luxury wristwatch for men with a refined modern design',
     },
   ];
 

@@ -102,9 +102,9 @@ export default function Products({
       <section className="relative py-20 bg-neutral-950 border-b border-neutral-800 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img
-            src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=75&w=1200"
-            srcSet="https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=70&w=640 640w,
-                    https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=75&w=1200 1200w"
+            src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&q=75&w=1200"
+            srcSet="https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&q=70&w=640 640w,
+                    https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&q=75&w=1200 1200w"
             sizes="100vw"
             fetchPriority="high"
             alt="Macro watch dial mechanics background"

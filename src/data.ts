@@ -7,7 +7,7 @@ export const PRODUCTS: Product[] = [
     price: 899,
     description: 'A sophisticated chronograph watch featuring a stainless steel case, sapphire crystal, and water resistance up to 100 meters.',
     category: 'Luxury',
-    image: 'https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&q=80&w=800',
     features: [
       'Precision Quartz Chronograph movement with 1/10-sec subdial',
       'High-grade 316L Stainless Steel case and link bracelet',
@@ -27,7 +27,7 @@ export const PRODUCTS: Product[] = [
     price: 499,
     description: 'Built for active lifestyles with shock resistance and advanced durability.',
     category: 'Sports',
-    image: 'https://images.unsplash.com/photo-1539874754764-5a96559165b0?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?auto=format&fit=crop&q=80&w=800',
     features: [
       'Ultra-durable carbon-reinforced composite hardware case',
       'Superior shock-absorption housing protects the movement',
@@ -47,7 +47,7 @@ export const PRODUCTS: Product[] = [
     price: 349,
     description: 'Modern smartwatch with fitness tracking, notifications, and long battery life.',
     category: 'Smart',
-    image: 'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&q=80&w=800',
     features: [
       '1.4-inch high-resolution Always-On AMOLED bezel-less touchscreen',
       'Continuous heart rate, Blood Oxygen (SpO2), and sleep tracker sensors',
@@ -67,7 +67,7 @@ export const PRODUCTS: Product[] = [
     price: 699,
     description: 'Inspired by traditional watchmaking with timeless aesthetics and reliable performance.',
     category: 'Classic',
-    image: 'https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?auto=format&fit=crop&q=80&w=800',
     features: [
       'Ultra-thin 38mm polished stainless steel vintage case',
       'Minimalist cream-egg shell dial with gold leaf-shaped indices',
@@ -94,7 +94,7 @@ export const BLOG_POSTS: BlogPost[] = [
       'In the digital age, a mechanical luxury watch has transcended utility entirely. It is a work of mechanical kinetic art. Wearing a fine watch is an appreciation of artistry — celebrating centuries-old traditions of finishing, polishing, engraving, and hand-assembly that cannot be replicated by microchips.'
     ],
     publishedDate: 'January 15, 2026',
-    image: 'https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1490367532201-b9bc1dc483f6?auto=format&fit=crop&q=80&w=800',
     author: 'Eleanor Sterling',
     readTime: '5 min read'
   },
@@ -108,7 +108,7 @@ export const BLOG_POSTS: BlogPost[] = [
       'While Quartz is technically superior in precision and affordability, Automatics are beloved for their soul. They are mini machines working entirely without cords, batteries, or software. For those looking to enter the world of mechanical craftsmanship, we have compiled a curated index of the best automatic watches under 1000, illustrating that high horology and legendary value can go hand in hand.'
     ],
     publishedDate: 'March 5, 2026',
-    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&q=80&w=800',
     author: 'Marcus Vance',
     readTime: '6 min read'
   },
@@ -122,7 +122,7 @@ export const BLOG_POSTS: BlogPost[] = [
       'Finally, pay close attention to water gaskets. Always ensure your winding crown is pushed in or screwed down completely before any liquid exposure. For anyone learning how to maintain mechanical watch calibers, plan a full brand overhaul service every 3 to 5 years, where experts clean, oil, and reseal internal components to maximize longevity.'
     ],
     publishedDate: 'April 20, 2026',
-    image: 'https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?auto=format&fit=crop&q=80&w=800',
     author: 'Silvia Cruz',
     readTime: '4 min read'
   },

@@ -97,9 +97,9 @@ export default function Contact() {
       <section className="relative py-20 bg-neutral-950 border-b border-neutral-800 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img
-            src={getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1524805444758-089113d48a6d", 1200, 75)}
-            srcSet={`${getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1524805444758-089113d48a6d", 640, 70)} 640w,
-                    ${getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1524805444758-089113d48a6d", 1200, 75)} 1200w`}
+            src={getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1434056886845-dac89ffe9b56", 1200, 75)}
+            srcSet={`${getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1434056886845-dac89ffe9b56", 640, 70)} 640w,
+                    ${getOptimizedUnsplashUrl("https://images.unsplash.com/photo-1434056886845-dac89ffe9b56", 1200, 75)} 1200w`}
             sizes="100vw"
             fetchPriority="high"
             decoding="async"
