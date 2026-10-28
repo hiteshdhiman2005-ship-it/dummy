@@ -30,11 +30,7 @@
           script.src = "https://connect.facebook.net/en_US/fbevents.js";
           document.head.appendChild(script);
         };
-        if ("requestIdleCallback" in window) {
-          window.requestIdleCallback(loadPixel, { timeout: 4000 });
-        } else {
-          window.setTimeout(loadPixel, 2000);
-        }
+        window.setTimeout(loadPixel, 10000);
       });
     </script>
     <!-- <noscript><img height="1" width="1" style="display:none"
@@ -53,11 +49,7 @@ src="https://www.facebook.com/tr?id=2709265122867998&ev=PageView&noscript=1"
           script.src = "https://www.googletagmanager.com/gtm.js?id=GTM-MCK77BPS";
           firstScript.parentNode.insertBefore(script, firstScript);
         };
-        if ("requestIdleCallback" in window) {
-          window.requestIdleCallback(loadTagManager, { timeout: 4000 });
-        } else {
-          window.setTimeout(loadTagManager, 2000);
-        }
+        window.setTimeout(loadTagManager, 10000);
       });
     </script>
     <!-- End Google Tag Manager -->

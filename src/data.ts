@@ -1,4 +1,4 @@
-import { Product, BlogPost, Review } from './types';
+import type { Product, BlogPost } from './types';
 
 export const PRODUCTS: Product[] = [
   {
@@ -139,32 +139,5 @@ export const BLOG_POSTS: BlogPost[] = [
     image: 'https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?auto=format&fit=crop&q=80&w=800',
     author: 'Adrian Thorne',
     readTime: '5 min read'
-  }
-];
-
-export const REVIEWS: Review[] = [
-  {
-    id: 'r1',
-    name: 'Michael Johnson',
-    rating: 5,
-    comment: 'I purchased a Prestige Elite watch and was amazed by the craftsmanship and quality. Highly recommended!',
-    date: 'February 14, 2026',
-    verified: true
-  },
-  {
-    id: 'r2',
-    name: 'Sophia Lindqvist',
-    rating: 5,
-    comment: 'The Royal Automatic is an absolute showstopper. I get compliments on the open-heart skeleton dial every single time I wear it. Worth every penny!',
-    date: 'April 2, 2026',
-    verified: true
-  },
-  {
-    id: 'r3',
-    name: 'David Vance',
-    rating: 4,
-    comment: 'Perfect for regular running and water activities. Extremely lightweight, tough frame, and looks much more tactical than ordinary plastic sports watches.',
-    date: 'May 19, 2026',
-    verified: true
   }
 ];

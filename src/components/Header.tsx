@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { Watch, ShoppingBag, Menu, X, Heart, Sparkles } from 'lucide-react';
+import { ShoppingBag, Menu, X, Heart, Sparkles } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import PrestigeLogo from './PrestigeLogo';
 
@@ -76,11 +75,7 @@ export default function Header({
                 >
                   {item.label}
                   {isActive && (
-                    <motion.div
-                      layoutId="activeNavLine"
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-amber-500"
-                      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                    />
+                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-amber-500" />
                   )}
                 </Link>
               );
@@ -101,13 +96,11 @@ export default function Header({
             >
               <Heart className={`h-5 w-5 sm:h-6 sm:w-6 ${currentPath === '/wishlist' ? 'fill-amber-500 text-amber-500' : 'text-neutral-300 hover:text-amber-400'}`} />
               {wishlistCount > 0 && (
-                <motion.span
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
+                <span
                   className="absolute -top-0.5 -right-0.5 bg-red-550 bg-red-500 text-neutral-950 border border-neutral-950 font-sans text-xs font-semibold h-5 w-5 rounded-full flex items-center justify-center text-[10px]"
                 >
                   {wishlistCount}
-                </motion.span>
+                </span>
               )}
             </Link>
 
@@ -120,13 +113,11 @@ export default function Header({
             >
               <ShoppingBag className="h-5 w-5 sm:h-6 sm:w-6 text-neutral-300 hover:text-amber-400" />
               {cartItemsCount > 0 && (
-                <motion.span
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
+                <span
                   className="absolute -top-0.5 -right-0.5 bg-amber-500 text-neutral-50 border border-neutral-950 font-sans text-xs font-bold h-5 w-5 rounded-full flex items-center justify-center"
                 >
                   {cartItemsCount}
-                </motion.span>
+                </span>
               )}
             </button>
 
@@ -147,14 +138,9 @@ export default function Header({
       </div>
 
       {/* Mobile Menu Drawer */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
+      {isOpen && (
+          <div
             id="mobile-navigation"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2 }}
             className="md:hidden border-t border-neutral-800 bg-neutral-950 px-4 pt-2 pb-6 space-y-2"
           >
             {navItems.map((item) => {
@@ -175,9 +161,8 @@ export default function Header({
                 </button>
               );
             })}
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </div>
+      )}
     </header>
   );
 }

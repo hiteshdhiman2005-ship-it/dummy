@@ -1,10 +1,8 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
 import { Shield, Sparkles, Award, Truck, ShieldCheck, Star, ArrowRight, Gem, Settings, Sliders, Check, ChevronDown, BookOpen, HelpCircle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useSEO } from '../hooks/useSEO';
-import { PageType } from '../types';
-import { REVIEWS } from '../data';
+import { REVIEWS } from '../reviews';
 
 // Performance Optimizer: Dynamically resizes Unsplash image URLs for responsive screens
 function getOptimizedUnsplashUrl(url: string, width: number, quality = 75) {
@@ -199,39 +197,27 @@ export default function Home({ setSelectedCategory }: HomeProps) {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_35%,rgba(184,134,64,0.16),transparent_34%),linear-gradient(115deg,#11100e_0%,#17130e_48%,#0b0b0a_100%)]" />
         <div className="relative mx-auto grid max-w-7xl items-center gap-8 px-4 py-10 sm:px-6 lg:min-h-[calc(100vh-138px)] lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:px-8 lg:py-16">
           <div className="relative z-10 max-w-xl">
-          <motion.div
-            initial={false}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
             className="mb-6 flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.28em] text-amber-300"
           >
             <span className="h-px w-10 bg-amber-500" />
             <Sparkles className="h-3.5 w-3.5" />
             <span>Independent watchmaking, considered daily</span>
-          </motion.div>
+          </div>
 
-          <motion.h1
-            initial={false}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.15 }}
+          <h1
             className="mb-6 max-w-2xl font-serif text-5xl font-semibold leading-[0.98] tracking-tight text-white sm:text-6xl lg:text-7xl"
           >
             Time, <span className="text-amber-400">well made.</span>
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={false}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+          <p
             className="mb-10 max-w-lg text-left text-base font-light leading-relaxed tracking-wide text-neutral-300 sm:text-lg"
           >
             Thoughtful proportions, dependable movements, and materials chosen to age beautifully. Find the piece that becomes part of your story.
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={false}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.45 }}
+          <div
             className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center"
           >
             <button
@@ -257,7 +243,7 @@ export default function Home({ setSelectedCategory }: HomeProps) {
               <span>EXPLORE NEW ARRIVALS</span>
               <ArrowRight className="h-4 w-4" />
             </button>
-          </motion.div>
+          </div>
           </div>
           <div className="relative flex min-h-[240px] items-center justify-center sm:min-h-[300px] lg:min-h-[560px]">
             <div className="absolute inset-0 rounded-[2rem] border border-amber-500/10 bg-neutral-950/30" />
@@ -286,13 +272,9 @@ export default function Home({ setSelectedCategory }: HomeProps) {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {categories.map((cat, idx) => (
-              <motion.div
+            {categories.map((cat) => (
+              <div
                 key={cat.slug}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-50px' }}
-                transition={{ duration: 0.35, delay: Math.min(idx, 3) * 0.02 }}
                 className="group relative h-96 rounded-xl overflow-hidden cursor-pointer shadow-2xl border border-neutral-800/80 bg-neutral-900 flex flex-col justify-end"
                 onClick={() => handleCategoryClick(cat.slug)}
               >
@@ -322,7 +304,7 @@ export default function Home({ setSelectedCategory }: HomeProps) {
                     <ArrowRight className="h-3 w-3 group-hover:translate-x-1.5 transition-transform duration-300" />
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -355,13 +337,9 @@ export default function Home({ setSelectedCategory }: HomeProps) {
 
             {/* Column Right (Value points grid) */}
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {valueProps.map((value, idx) => (
-                <motion.div
+              {valueProps.map((value) => (
+                <div
                   key={value.title}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: Math.min(idx, 3) * 0.02 }}
                   className="p-5 rounded-lg bg-neutral-950/40 border border-neutral-800/80 hover:bg-neutral-950/80 hover:border-amber-500/20 transition-all duration-300"
                 >
                   <div className="p-2 w-fit bg-neutral-800 rounded-lg mb-3">
@@ -374,7 +352,7 @@ export default function Home({ setSelectedCategory }: HomeProps) {
                   <p className="text-neutral-400 text-xs leading-relaxed font-light">
                     {value.desc}
                   </p>
-                </motion.div>
+                </div>
               ))}
             </div>
 
@@ -695,13 +673,9 @@ export default function Home({ setSelectedCategory }: HomeProps) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {REVIEWS.map((review, idx) => (
-              <motion.div
+            {REVIEWS.map((review) => (
+              <div
                 key={review.id}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.35, delay: Math.min(idx, 3) * 0.02 }}
                 className="bg-neutral-900 border border-neutral-800/85 p-6 rounded-xl flex flex-col justify-between text-left h-full"
               >
                 <div>
@@ -728,7 +702,7 @@ export default function Home({ setSelectedCategory }: HomeProps) {
                   </div>
                   <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" title="Purchase Confirmed" />
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -791,12 +765,8 @@ export default function Home({ setSelectedCategory }: HomeProps) {
             ].map((faq, idx) => {
               const isOpen = activeFaq === idx;
               return (
-                <motion.div
+                <div
                   key={idx}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.25, delay: Math.min(idx, 3) * 0.01 }}
                   className="bg-neutral-950/80 border border-neutral-800/80 rounded-xl overflow-hidden transition-all duration-300 hover:border-blue-500/30"
                 >
                   <button
@@ -814,14 +784,8 @@ export default function Home({ setSelectedCategory }: HomeProps) {
                     </div>
                   </button>
 
-                  <AnimatePresence initial={false}>
                     {isOpen && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: 'easeInOut' }}
-                      >
+                      <div>
                         <div className="px-5 pb-6 sm:px-6 sm:pb-8 pt-0 border-t border-neutral-900">
                           <p className="text-neutral-300 text-sm leading-relaxed mt-4 mb-4 font-sans max-w-3xl">
                             {faq.answer}
@@ -835,10 +799,9 @@ export default function Home({ setSelectedCategory }: HomeProps) {
                             ))}
                           </div>
                         </div>
-                      </motion.div>
+                      </div>
                     )}
-                  </AnimatePresence>
-                </motion.div>
+                </div>
               );
             })}
           </div>

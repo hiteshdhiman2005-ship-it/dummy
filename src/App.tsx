@@ -1,25 +1,21 @@
 import { lazy, Suspense, useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
 import { X, ShoppingBag, Plus, Minus, Trash2, ArrowRight, Lock, CheckCircle2 } from 'lucide-react';
-import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-import Home from './pages/Home';
-
+const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Products = lazy(() => import('./pages/Products'));
 const Blog = lazy(() => import('./pages/Blog'));
 const Contact = lazy(() => import('./pages/Contact'));
-const Wishlist = lazy(() => import('./pages/Wishlist'));
+const Wishlist = lazy(() => import('./pages/WishlistRoute'));
 const Sitemap = lazy(() => import('./pages/Sitemap'));
 
-import { CartItem, Product } from './types';
-import { PRODUCTS } from './data';
+import type { CartItem, Product } from './types';
 
 export default function App() {
-  const location = useLocation();
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<'All' | 'Luxury' | 'Sports' | 'Smart' | 'Classic'>('All');
   const [cart, setCart] = useState<CartItem[]>([]);
@@ -122,101 +118,75 @@ export default function App() {
         wishlistCount={wishlist.length}
       />
 
-      {/* 2. Page Content Slot with page transition */}
+      {/* 2. Page Content Slot */}
       <main className="flex-grow">
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.div
-            key={location.pathname}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.25 }}
-          >
-            <Suspense fallback={<div className="min-h-[60vh]" aria-busy="true" />}>
-              <Routes>
-                <Route
-                  path="/"
-                  element={
-                    <Home
-                      setSelectedCategory={setSelectedCategory}
-                    />
-                  }
+        <Suspense fallback={<div className="min-h-[60vh]" aria-busy="true" />}>
+          <Routes>
+            <Route
+              path="/"
+              element={<Home setSelectedCategory={setSelectedCategory} />}
+            />
+            <Route path="/about" element={<About />} />
+            <Route
+              path="/services"
+              element={
+                <Products
+                  onAddToCart={handleAddToCart}
+                  selectedCategory={selectedCategory}
+                  setSelectedCategory={setSelectedCategory}
+                  wishlist={wishlist}
+                  onToggleWishlist={handleToggleWishlist}
                 />
-                <Route path="/about" element={<About />} />
-                <Route
-                  path="/services"
-                  element={
-                    <Products
-                      onAddToCart={handleAddToCart}
-                      selectedCategory={selectedCategory}
-                      setSelectedCategory={setSelectedCategory}
-                      wishlist={wishlist}
-                      onToggleWishlist={handleToggleWishlist}
-                    />
-                  }
+              }
+            />
+            <Route
+              path="/products"
+              element={
+                <Products
+                  onAddToCart={handleAddToCart}
+                  selectedCategory={selectedCategory}
+                  setSelectedCategory={setSelectedCategory}
+                  wishlist={wishlist}
+                  onToggleWishlist={handleToggleWishlist}
                 />
-                <Route
-                  path="/products"
-                  element={
-                    <Products
-                      onAddToCart={handleAddToCart}
-                      selectedCategory={selectedCategory}
-                      setSelectedCategory={setSelectedCategory}
-                      wishlist={wishlist}
-                      onToggleWishlist={handleToggleWishlist}
-                    />
-                  }
+              }
+            />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/sitemap" element={<Sitemap />} />
+            <Route
+              path="/wishlist"
+              element={
+                <Wishlist
+                  wishlist={wishlist}
+                  onAddToCart={handleAddToCart}
+                  onToggleWishlist={handleToggleWishlist}
                 />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/sitemap" element={<Sitemap />} />
-                <Route
-                  path="/wishlist"
-                  element={
-                    <Wishlist
-                      wishlistItems={PRODUCTS.filter((p) => wishlist.includes(p.id))}
-                      onAddToCart={handleAddToCart}
-                      onToggleWishlist={handleToggleWishlist}
-                    />
-                  }
-                />
-                <Route
-                  path="*"
-                  element={
-                    <Home
-                      setSelectedCategory={setSelectedCategory}
-                    />
-                  }
-                />
-              </Routes>
-            </Suspense>
-          </motion.div>
-        </AnimatePresence>
+              }
+            />
+            <Route
+              path="*"
+              element={<Home setSelectedCategory={setSelectedCategory} />}
+            />
+          </Routes>
+        </Suspense>
       </main>
 
       {/* 3. Footer Bar */}
       <Footer />
 
-      {/* 4. Cart Side Drawer Overlay sliding panel */}
-      <AnimatePresence>
-        {isCartOpen && (
+      {/* 4. Cart Side Drawer Overlay */}
+      {isCartOpen && (
           <div className="fixed inset-0 z-55 overflow-hidden font-sans" id="shopping-cart-drawer">
             {/* Backdrop cover */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+            <div
               onClick={() => setIsCartOpen(false)}
               className="absolute inset-0 bg-neutral-950/80 backdrop-blur-xs cursor-pointer"
             />
 
             {/* Inner Drawer body */}
             <div className="absolute inset-y-0 right-0 max-w-full flex pl-10">
-              <motion.div
-                initial={{ x: '100%' }}
-                animate={{ x: 0 }}
-                exit={{ x: '100%' }}
-                transition={{ type: 'spring', duration: 0.5, bounce: 0 }}
+              <div
                 className="w-screen max-w-md bg-neutral-950 border-l border-neutral-800 flex flex-col justify-between h-full shadow-2xl overflow-hidden"
               >
                 
@@ -246,16 +216,11 @@ export default function App() {
                 {/* Drawer Content */}
                 <div className="flex-1 overflow-y-auto py-6 px-6 scrollbar-thin scrollbar-thumb-neutral-800">
                   
-                  <AnimatePresence mode="wait">
                     {isCheckoutSuccess ? (
                       
                       // Checkout Receipt block
-                      <motion.div
+                      <div
                         id="checkout-success-view"
-                        key="checkout-success"
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0 }}
                         className="text-center py-10 space-y-6"
                       >
                         <div className="w-14 h-14 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto shadow-inner">
@@ -291,16 +256,13 @@ export default function App() {
                         >
                           Keep Browsing Watches
                         </button>
-                      </motion.div>
+                      </div>
 
                     ) : cart.length > 0 ? (
                       
                       // Active items list
-                      <motion.div
+                      <div
                         key="cart-active-list"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
                         className="space-y-6"
                       >
                         {cart.map((item) => (
@@ -362,15 +324,13 @@ export default function App() {
                             </button>
                           </div>
                         ))}
-                      </motion.div>
+                      </div>
 
                     ) : (
                       
                       // Empty Cart screen
-                      <motion.div
+                      <div
                         key="cart-empty"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
                         className="text-center py-20 space-y-4"
                       >
                         <div className="w-12 h-12 bg-neutral-900 border border-neutral-800 rounded-full flex items-center justify-center mx-auto text-neutral-600">
@@ -392,10 +352,9 @@ export default function App() {
                         >
                           Explore Products
                         </button>
-                      </motion.div>
+                      </div>
 
                     )}
-                  </AnimatePresence>
 
                 </div>
 
@@ -433,11 +392,10 @@ export default function App() {
                   </div>
                 )}
 
-              </motion.div>
+              </div>
             </div>
           </div>
-        )}
-      </AnimatePresence>
+      )}
 
     </div>
   );
