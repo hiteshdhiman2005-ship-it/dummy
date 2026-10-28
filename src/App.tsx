@@ -1,12 +1,11 @@
 import { lazy, Suspense, useState, useEffect } from 'react';
 import { X, ShoppingBag, Plus, Minus, Trash2, ArrowRight, Lock, CheckCircle2 } from 'lucide-react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-import Home from './pages/Home';
-
+const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Products = lazy(() => import('./pages/Products'));
 const Blog = lazy(() => import('./pages/Blog'));
@@ -15,8 +14,10 @@ const Wishlist = lazy(() => import('./pages/WishlistRoute'));
 const Sitemap = lazy(() => import('./pages/Sitemap'));
 
 import type { CartItem, Product } from './types';
+import HomeHero from './pages/HomeHero';
 
 export default function App() {
+  const location = useLocation();
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<'All' | 'Luxury' | 'Sports' | 'Smart' | 'Classic'>('All');
   const [cart, setCart] = useState<CartItem[]>([]);
@@ -121,7 +122,15 @@ export default function App() {
 
       {/* 2. Page Content Slot */}
       <main className="flex-grow">
-        <Suspense fallback={<div className="min-h-[60vh]" aria-busy="true" />}>
+        <Suspense
+          fallback={
+            location.pathname === '/' ? (
+              <HomeHero setSelectedCategory={setSelectedCategory} />
+            ) : (
+              <div className="min-h-[60vh]" aria-busy="true" />
+            )
+          }
+        >
           <Routes>
             <Route
               path="/"
