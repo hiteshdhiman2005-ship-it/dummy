@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { lazy, Suspense, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ShoppingBag, Plus, Minus, Trash2, ArrowRight, Lock, CheckCircle2 } from 'lucide-react';
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
@@ -7,12 +7,13 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 import Home from './pages/Home';
-import About from './pages/About';
-import Products from './pages/Products';
-import Blog from './pages/Blog';
-import Contact from './pages/Contact';
-import Wishlist from './pages/Wishlist';
-import Sitemap from './pages/Sitemap';
+
+const About = lazy(() => import('./pages/About'));
+const Products = lazy(() => import('./pages/Products'));
+const Blog = lazy(() => import('./pages/Blog'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Wishlist = lazy(() => import('./pages/Wishlist'));
+const Sitemap = lazy(() => import('./pages/Sitemap'));
 
 import { CartItem, Product } from './types';
 import { PRODUCTS } from './data';
@@ -123,7 +124,7 @@ export default function App() {
 
       {/* 2. Page Content Slot with page transition */}
       <main className="flex-grow">
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={location.pathname}
             initial={{ opacity: 0, y: 10 }}
@@ -131,62 +132,64 @@ export default function App() {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.25 }}
           >
-            <Routes>
-              <Route
-                path="/"
-                element={
-                  <Home
-                    setSelectedCategory={setSelectedCategory}
-                  />
-                }
-              />
-              <Route path="/about" element={<About />} />
-              <Route
-                path="/services"
-                element={
-                  <Products
-                    onAddToCart={handleAddToCart}
-                    selectedCategory={selectedCategory}
-                    setSelectedCategory={setSelectedCategory}
-                    wishlist={wishlist}
-                    onToggleWishlist={handleToggleWishlist}
-                  />
-                }
-              />
-              <Route
-                path="/products"
-                element={
-                  <Products
-                    onAddToCart={handleAddToCart}
-                    selectedCategory={selectedCategory}
-                    setSelectedCategory={setSelectedCategory}
-                    wishlist={wishlist}
-                    onToggleWishlist={handleToggleWishlist}
-                  />
-                }
-              />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/sitemap" element={<Sitemap />} />
-              <Route
-                path="/wishlist"
-                element={
-                  <Wishlist
-                    wishlistItems={PRODUCTS.filter((p) => wishlist.includes(p.id))}
-                    onAddToCart={handleAddToCart}
-                    onToggleWishlist={handleToggleWishlist}
-                  />
-                }
-              />
-              <Route
-                path="*"
-                element={
-                  <Home
-                    setSelectedCategory={setSelectedCategory}
-                  />
-                }
-              />
-            </Routes>
+            <Suspense fallback={<div className="min-h-[60vh]" aria-busy="true" />}>
+              <Routes>
+                <Route
+                  path="/"
+                  element={
+                    <Home
+                      setSelectedCategory={setSelectedCategory}
+                    />
+                  }
+                />
+                <Route path="/about" element={<About />} />
+                <Route
+                  path="/services"
+                  element={
+                    <Products
+                      onAddToCart={handleAddToCart}
+                      selectedCategory={selectedCategory}
+                      setSelectedCategory={setSelectedCategory}
+                      wishlist={wishlist}
+                      onToggleWishlist={handleToggleWishlist}
+                    />
+                  }
+                />
+                <Route
+                  path="/products"
+                  element={
+                    <Products
+                      onAddToCart={handleAddToCart}
+                      selectedCategory={selectedCategory}
+                      setSelectedCategory={setSelectedCategory}
+                      wishlist={wishlist}
+                      onToggleWishlist={handleToggleWishlist}
+                    />
+                  }
+                />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/sitemap" element={<Sitemap />} />
+                <Route
+                  path="/wishlist"
+                  element={
+                    <Wishlist
+                      wishlistItems={PRODUCTS.filter((p) => wishlist.includes(p.id))}
+                      onAddToCart={handleAddToCart}
+                      onToggleWishlist={handleToggleWishlist}
+                    />
+                  }
+                />
+                <Route
+                  path="*"
+                  element={
+                    <Home
+                      setSelectedCategory={setSelectedCategory}
+                    />
+                  }
+                />
+              </Routes>
+            </Suspense>
           </motion.div>
         </AnimatePresence>
       </main>

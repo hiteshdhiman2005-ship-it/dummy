@@ -40,12 +40,12 @@ export default function Header({
     <header className="sticky top-0 z-50 bg-neutral-900/90 backdrop-blur-md border-b border-neutral-800 text-neutral-1100">
       {/* Premium Metallic Announcement Bar */}
       <div className="gold-shimmer-bg h-1.5 w-full" />
-      <div className="bg-neutral-950 text-white text-[9px] sm:text-[10px] font-mono font-medium py-1.5 px-4 text-center tracking-[0.14em] uppercase border-b border-amber-500/15 items-center justify-center space-x-1.5 select-none">
-        <Sparkles className="h-3.5 w-3.5 text-amber-300 animate-pulse" />
+      <div className="flex items-center justify-center gap-1.5 bg-neutral-950 px-3 py-1.5 text-center font-mono text-[8px] font-medium uppercase tracking-[0.08em] text-white border-b border-amber-500/15 sm:px-4 sm:text-[10px] sm:tracking-[0.14em]">
+        <Sparkles className="h-3.5 w-3.5 shrink-0 text-amber-300 animate-pulse" />
         <span className="text-amber-100/90 font-semibold">Prestige Studio Configurator Live below — Tailor Your Gilded Calibre today</span>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between gap-4">
+        <div className="flex h-20 items-center justify-between gap-3 sm:gap-4">
           
           {/* Logo */}
           <Link
@@ -88,18 +88,18 @@ export default function Header({
           </nav>
 
           {/* Shopping Bag and Mobile Drawer toggles */}
-          <div className="flex shrink-0 items-center space-x-3 sm:space-x-4">
+          <div className="flex shrink-0 items-center space-x-0 sm:space-x-4">
             {/* Wishlist Button */}
             <Link
               id="header-wishlist-btn"
               to="/wishlist"
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className={`p-2.5 text-neutral-400 hover:text-amber-400 hover:bg-neutral-800/60 rounded-full transition-all relative cursor-pointer focus:outline-none ${
+              className={`hidden h-11 w-11 items-center justify-center text-neutral-400 hover:text-amber-400 hover:bg-neutral-800/60 rounded-full transition-all relative cursor-pointer focus:outline-none min-[360px]:flex ${
                 currentPath === '/wishlist' ? 'text-amber-400' : ''
               }`}
               aria-label="View Wishlist"
             >
-              <Heart className={`h-6 w-6 ${currentPath === '/wishlist' ? 'fill-amber-500 text-amber-500' : 'text-neutral-300 hover:text-amber-400'}`} />
+              <Heart className={`h-5 w-5 sm:h-6 sm:w-6 ${currentPath === '/wishlist' ? 'fill-amber-500 text-amber-500' : 'text-neutral-300 hover:text-amber-400'}`} />
               {wishlistCount > 0 && (
                 <motion.span
                   initial={{ scale: 0 }}
@@ -115,10 +115,10 @@ export default function Header({
             <button
               id="header-cart-btn"
               onClick={onOpenCart}
-              className="p-2.5 text-neutral-400 hover:text-amber-400 hover:bg-neutral-800/60/60 rounded-full transition-all relative cursor-pointer focus:outline-none"
+              className="flex h-11 w-11 items-center justify-center text-neutral-400 hover:text-amber-400 hover:bg-neutral-800/60 rounded-full transition-all relative cursor-pointer focus:outline-none"
               aria-label="Open Cart"
             >
-              <ShoppingBag className="h-6 w-6 text-neutral-300 hover:text-amber-400" />
+              <ShoppingBag className="h-5 w-5 sm:h-6 sm:w-6 text-neutral-300 hover:text-amber-400" />
               {cartItemsCount > 0 && (
                 <motion.span
                   initial={{ scale: 0 }}
@@ -134,10 +134,12 @@ export default function Header({
             <button
               id="header-mobile-menu-btn"
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2.5 text-neutral-400 hover:text-white hover:bg-neutral-800/6ounded-full cursor-pointer focus:outline-none"
+              aria-expanded={isOpen}
+              aria-controls="mobile-navigation"
+              className="md:hidden flex h-11 w-11 items-center justify-center text-neutral-400 hover:text-white hover:bg-neutral-800 rounded-full cursor-pointer focus:outline-none"
               aria-label="Toggle menu"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="h-5 w-5 sm:h-6 sm:w-6" /> : <Menu className="h-5 w-5 sm:h-6 sm:w-6" />}
             </button>
           </div>
 
@@ -148,6 +150,7 @@ export default function Header({
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            id="mobile-navigation"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
@@ -178,4 +181,3 @@ export default function Header({
     </header>
   );
 }
-
