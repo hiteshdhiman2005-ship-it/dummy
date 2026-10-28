@@ -67,39 +67,6 @@ export default function Products({
     { title: 'International Warranty', desc: 'Every model carries our global, transferrable 5-year warranty package.' }
   ];
 
-  const watchGallery = [
-    {
-      title: 'Luxury watch for formal occasions',
-      image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49',
-      alt: 'Luxury men’s watch with leather strap for formal occasions',
-    },
-    {
-      title: 'Sports watch for active days',
-      image: 'https://images.unsplash.com/photo-1542496658-e33a6d0d50f6',
-      alt: 'Durable men’s sports watch designed for active daily wear',
-    },
-    {
-      title: 'Minimal watch for business style',
-      image: 'https://images.unsplash.com/photo-1508057198894-247b23fe5ade',
-      alt: 'Minimal luxury watch for men with a refined business design',
-    },
-    {
-      title: 'Classic watchmaking details',
-      image: 'https://images.unsplash.com/photo-1434056886845-dac89ffe9b56',
-      alt: 'Close-up of a classic luxury watch showcasing fine craftsmanship',
-    },
-    {
-      title: 'Premium metal bracelet timepiece',
-      image: 'https://images.unsplash.com/photo-1490367532201-b9bc1dc483f6',
-      alt: 'Men’s luxury wristwatch with a premium metallic finish',
-    },
-    {
-      title: 'Modern everyday wristwatch',
-      image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30',
-      alt: 'Modern men’s wristwatch with a clean everyday style',
-    },
-  ];
-
   // Filter and sort side effects
   useEffect(() => {
     let result = [...PRODUCTS];
@@ -327,50 +294,6 @@ export default function Products({
           </div>
         )}
 
-      </section>
-
-      <section className="py-20 bg-neutral-900 border-b border-neutral-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-[10px] uppercase font-mono tracking-widest text-amber-500 font-bold">
-              PrestigeTime Collection
-            </span>
-            <h2 className="font-serif text-3xl sm:text-4xl font-semibold tracking-wide text-white mt-3 mb-4">
-              Explore Watches for Every Occasion
-            </h2>
-            <div className="h-0.5 w-16 bg-amber-500 mx-auto rounded mb-4" />
-            <p className="text-neutral-400 text-sm sm:text-base">
-              Browse luxury, classic, and sport watch styles selected for lasting craftsmanship and everyday versatility.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {watchGallery.map((item) => (
-              <figure
-                key={item.title}
-                className="group overflow-hidden rounded-xl border border-neutral-800 bg-neutral-950 shadow-xl"
-              >
-                <div className="aspect-[4/3] overflow-hidden bg-neutral-900">
-                  <img
-                    src={getOptimizedUnsplashUrl(item.image, 640, 78)}
-                    srcSet={`${getOptimizedUnsplashUrl(item.image, 400, 75)} 400w, ${getOptimizedUnsplashUrl(item.image, 640, 78)} 640w`}
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    width={640}
-                    height={480}
-                    loading="lazy"
-                    decoding="async"
-                    alt={item.alt}
-                    className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                    referrerPolicy="no-referrer"
-                  />
-                </div>
-                <figcaption className="border-t border-neutral-800 px-4 py-4 text-sm font-medium text-neutral-200">
-                  {item.title}
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* 3. Product Features highlights catalog segment */}
