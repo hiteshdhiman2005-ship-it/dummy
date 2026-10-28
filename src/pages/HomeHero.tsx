@@ -56,20 +56,12 @@ export default function HomeHero({ setSelectedCategory }: HomeHeroProps) {
 
         <div className="relative flex min-h-[240px] items-center justify-center sm:min-h-[300px] lg:min-h-[560px]">
           <div className="absolute inset-0 rounded-[2rem] border border-amber-500/10 bg-neutral-950/30" />
-          <div className="relative z-10 w-full max-w-md rounded-[1.75rem] border border-neutral-800 bg-neutral-900/75 p-4 shadow-2xl shadow-black/30 sm:p-6">
-            <div className="pointer-events-none absolute inset-x-8 top-4 h-28 rounded-full bg-amber-500/10 blur-3xl" />
-            <img
-              src="/luxury-watch-men-cut.svg"
-              alt="Luxury watch for men"
-              className="relative z-10 mx-auto w-full max-w-[320px] drop-shadow-[0_26px_40px_rgba(0,0,0,0.45)]"
-            />
-            <div className="relative z-10 mt-2">
-              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-amber-400">PT / 01</p>
-              <h3 className="mt-4 font-serif text-2xl text-white sm:text-3xl">The automatic collection</h3>
-              <p className="mt-3 text-sm leading-relaxed text-neutral-300">
-                Precision engineered for collectors who value subtle luxury, enduring craftsmanship, and refined everyday wear.
-              </p>
-            </div>
+          <div className="relative z-10 max-w-md rounded-2xl border border-neutral-800 bg-neutral-900/70 p-6 shadow-2xl shadow-black/30 sm:p-8">
+            <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-amber-400">PT / 01</p>
+            <h3 className="mt-4 font-serif text-2xl text-white sm:text-3xl">The automatic collection</h3>
+            <p className="mt-3 text-sm leading-relaxed text-neutral-300">
+              Precision engineered for collectors who value subtle luxury, enduring craftsmanship, and refined everyday wear.
+            </p>
           </div>
         </div>
       </div>

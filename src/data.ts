@@ -7,7 +7,7 @@ export const PRODUCTS: Product[] = [
     price: 899,
     description: 'A sophisticated chronograph watch featuring a stainless steel case, sapphire crystal, and water resistance up to 100 meters.',
     category: 'Luxury',
-    image: '/luxury-watch-men-cut.svg',
+    image: 'https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800',
     features: [
       'Precision Quartz Chronograph movement with 1/10-sec subdial',
       'High-grade 316L Stainless Steel case and link bracelet',
