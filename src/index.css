@@ -114,6 +114,12 @@ input:focus, textarea:focus, select:focus {
   border-color: var(--color-amber-400) !important;
 }
 
+/* Refined, squared-off corners for primary actions; keep circular icon controls round. */
+button:not(.rounded-full),
+a[class*="bg-amber-500"] {
+  border-radius: 2px !important;
+}
+
 /* Keep image overlays readable against the dark sport palette */
 .brightness-\[0\.6\] {
   filter: brightness(0.7);
