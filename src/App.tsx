@@ -5,7 +5,8 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-const Home = lazy(() => import('./pages/Home'));
+import Home from './pages/Home';
+
 const About = lazy(() => import('./pages/About'));
 const Products = lazy(() => import('./pages/Products'));
 const Blog = lazy(() => import('./pages/Blog'));
