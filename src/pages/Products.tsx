@@ -51,7 +51,7 @@ export default function Products({
 }: ProductsProps) {
   // SEO configuration for the watch catalog
   useSEO({
-    title: 'Luxury Watches for Men | Premium Watch Collection',
+    title: 'Shop Luxury, Sport & Classic Watches | PrestigeTime',
     description: 'Explore luxury watches for men, premium automatic timepieces, sports watches, and classic designs selected for precision and lasting style.',
     keywords: [
       'luxury watches for men',
