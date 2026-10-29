@@ -17,11 +17,13 @@ export interface Product {
 
 export interface BlogPost {
   id: string;
+  slug: string;
   title: string;
   summary: string;
   content: string[];
   publishedDate: string;
   image: string;
+  imageAlt: string;
   author: string;
   readTime: string;
 }

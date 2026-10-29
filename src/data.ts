@@ -86,6 +86,7 @@ export const PRODUCTS: Product[] = [
 export const BLOG_POSTS: BlogPost[] = [
   {
     id: 'b1',
+    slug: 'history-of-luxury-watches',
     title: 'The History of Luxury Watches',
     summary: 'Luxury watches have evolved from simple timekeeping devices into symbols of craftsmanship, prestige, and personal style.',
     content: [
@@ -95,11 +96,13 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     publishedDate: 'January 15, 2026',
     image: 'https://images.unsplash.com/photo-1490367532201-b9bc1dc483f6?auto=format&fit=crop&q=80&w=800',
+    imageAlt: 'Close-up of a luxury wristwatch with a detailed metallic dial',
     author: 'Eleanor Sterling',
     readTime: '5 min read'
   },
   {
     id: 'b3',
+    slug: 'automatic-vs-quartz-watches-under-1000',
     title: 'Automatic vs Quartz: Best Automatic Watches Under 1000',
     summary: 'Understanding the differences between automatic and quartz watches can help you find the best automatic watches under 1000 for your collection.',
     content: [
@@ -109,11 +112,13 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     publishedDate: 'March 5, 2026',
     image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&q=80&w=800',
+    imageAlt: 'Close-up of a wristwatch with a detailed dial and polished case',
     author: 'Marcus Vance',
     readTime: '6 min read'
   },
   {
     id: 'b4',
+    slug: 'how-to-maintain-mechanical-watches',
     title: 'How to Maintain Mechanical Watch & Automatic Timepieces',
     summary: 'Discover professional watchmaking secrets on how to maintain mechanical watch gears and cases at home for peak lifetime accuracy.',
     content: [
@@ -123,11 +128,13 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     publishedDate: 'April 20, 2026',
     image: 'https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?auto=format&fit=crop&q=80&w=800',
+    imageAlt: 'Classic wristwatch showing its dial and polished watch case',
     author: 'Silvia Cruz',
     readTime: '4 min read'
   },
   {
     id: 'b5',
+    slug: 'trending-watch-styles-2026',
     title: 'Trending Watch Styles & Designs for 2026',
     summary: 'Explore the latest trending watch styles shaping the industry, from integrated luxury bracelets to sustainable materials.',
     content: [
@@ -137,6 +144,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     publishedDate: 'May 12, 2026',
     image: 'https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?auto=format&fit=crop&q=80&w=800',
+    imageAlt: 'Contemporary wristwatch with a prominent dial and modern styling',
     author: 'Adrian Thorne',
     readTime: '5 min read'
   }
