@@ -71,13 +71,14 @@ export default function Home({ setSelectedCategory }: HomeProps) {
   const [selectedStrap, setSelectedStrap] = useState<'Cognac' | 'Gilded' | 'BlackRubber' | 'SteelLoop'>('Cognac');
   const [isConfigAdded, setIsConfigAdded] = useState(false);
 
-  // Dynamic SEO Configuration using high-volume, low-difficulty keywords requested by user
+  // Homepage SEO targets luxury watches for men as the primary keyword.
   useSEO({
-    title: 'Watches for Men | Independent Watchmaking Brands & Custom Automatic Watches',
-    description: 'Shop premium watches for men, featuring independent watchmaking brands and custom automatic watches. Explore stylish, durable, and precise timepieces crafted for collectors.',
+    title: 'Luxury Watches for Men | Premium Timepieces | PrestigeTime',
+    description: 'Shop luxury watches for men at PrestigeTime. Explore premium automatic, sports, and classic timepieces chosen for quality, precision, and timeless style.',
     keywords: [
+      'luxury watches for men',
       'watches for men',
-      'independent watchmaking brands',
+      'premium watches for men',
       'custom automatic watches',
       'luxury brand comparison',
       'affordable Swiss automatic watches',
@@ -91,7 +92,7 @@ export default function Home({ setSelectedCategory }: HomeProps) {
         'name': 'PrestigeTime',
         'url': typeof window !== 'undefined' ? window.location.origin : 'https://prestigetime.com',
         'image': 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&q=80&w=600',
-        'description': 'Shop premium watches for men, featuring independent watchmaking brands and custom automatic watches. Explore stylish, durable, and precise timepieces crafted for collectors.',
+        'description': 'Shop luxury watches for men at PrestigeTime. Explore premium automatic, sports, and classic timepieces chosen for quality, precision, and timeless style.',
         'priceRange': '$$$',
         'address': {
           '@type': 'PostalAddress',
@@ -108,10 +109,10 @@ export default function Home({ setSelectedCategory }: HomeProps) {
         'mainEntity': [
           {
             '@type': 'Question',
-            'name': 'What are the best entry level luxury watches for new collectors?',
+            'name': 'How do I choose luxury watches for men?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'When launching your collection, the best entry level luxury watches combine reliable movements, premium materials, and brand heritage. Options like the Prestige Elite series offer classic dress Watch aesthetics, scratch-resistant sapphire crystal surfaces, and robust calibers that serve as the ideal foundational piece for any growing collection without requiring a master collector\'s budget.'
+              'text': 'Choose luxury watches for men by considering the movement, case and strap materials, water resistance, comfort, and the occasions you plan to wear the watch. PrestigeTime offers automatic, sports, and classic styles with product specifications to help you compare each timepiece.'
             }
           },
           {
@@ -722,6 +723,12 @@ export default function Home({ setSelectedCategory }: HomeProps) {
 
           <div className="space-y-4">
             {[
+              {
+                question: "How do I choose luxury watches for men?",
+                answer: "Compare the movement, case and strap materials, water resistance, comfort, and the occasions you plan to wear the watch. PrestigeTime offers automatic, sports, and classic styles with product specifications to help you compare each timepiece.",
+                tag: "Luxury Watch Buying Guide",
+                keywords: ["luxury watches for men", "premium watches for men", "men's watch buying guide"]
+              },
               {
                 question: "What makes independent watchmaking brands and custom automatic watches stand out for collectors?",
                 answer: "Independent watchmaking brands stand out through handcrafted finishing, limited production runs, and unique design details. Custom automatic watches offer owners a tailored movement, rare materials, and a personalized dial experience that combines mechanical precision with artisanal character.",

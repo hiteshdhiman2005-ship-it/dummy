@@ -18,7 +18,7 @@ export default function Sitemap() {
   });
 
   const mainPages = [
-    { name: 'Home Page', path: '/', desc: 'Our premium storefront featuring independent watchmaking brands, custom automatic watch design, and featured curators.', icon: <Compass className="h-4 w-4 text-amber-500" /> },
+    { name: 'Home Page', path: '/', desc: 'Explore luxury watches for men, including premium automatic, sports, and classic timepieces.', icon: <Compass className="h-4 w-4 text-amber-500" /> },
     { name: 'Products Catalog', path: '/products', desc: 'Browse and filter our comprehensive catalog of sports, luxury, classic, and smart calibers.', icon: <Watch className="h-4 w-4 text-amber-500" /> },
     { name: 'About Our Story', path: '/about', desc: 'Learn about our legacy, certified authentic luxury standards, and brand heritage.', icon: <Landmark className="h-4 w-4 text-amber-500" /> },
     { name: 'My Wishlist', path: '/wishlist', desc: 'Your saved items and custom-selected luxury sets ready for secure order checkout.', icon: <Heart className="h-4 w-4 text-amber-500" /> },
@@ -30,7 +30,7 @@ export default function Sitemap() {
     {
       category: 'Storefront & Highlights',
       items: [
-        { label: 'independent watchmaking brands', target: '/', desc: 'Explore boutique makers, limited editions, and craft-focused mechanical timepieces.' },
+        { label: 'luxury watches for men', target: '/', desc: 'Explore premium automatic, sports, and classic men’s watches selected for quality and timeless style.' },
         { label: 'watches for men', target: '/', desc: 'Browse professional men’s curations, daily executive wear, and high-precision quartz pieces.' },
         { label: 'custom automatic watches', target: '/', desc: 'Discover bespoke automatic calibers, personalized dial options, and tailored watch experiences.' },
       ]

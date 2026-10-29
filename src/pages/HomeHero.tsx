@@ -17,15 +17,15 @@ export default function HomeHero({ setSelectedCategory }: HomeHeroProps) {
           <div className="mb-6 flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.28em] text-amber-300">
             <span className="h-px w-10 bg-amber-500" />
             <Sparkles className="h-3.5 w-3.5" />
-            <span>Independent watchmaking, considered daily</span>
+            <span>Luxury watches for men, made for every day</span>
           </div>
 
           <h1 className="mb-6 max-w-2xl font-serif text-5xl font-semibold leading-[0.98] tracking-tight text-white sm:text-6xl lg:text-7xl">
-            Time, <span className="text-amber-400">well made.</span>
+            Luxury Watches <span className="text-amber-400">for Men</span>
           </h1>
 
           <p className="mb-10 max-w-lg text-left text-base font-light leading-relaxed tracking-wide text-neutral-300 sm:text-lg">
-            Thoughtful proportions, dependable movements, and materials chosen to age beautifully. Find the piece that becomes part of your story.
+            Explore refined designs, dependable movements, and lasting materials. Find a luxury timepiece that suits your style and becomes part of your story.
           </p>
 
           <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
