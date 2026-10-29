@@ -198,39 +198,6 @@ export default function Home({ setSelectedCategory }: HomeProps) {
     }
   ];
 
-  const luxuryWatchImages = [
-    {
-      title: 'Luxury stainless steel chronograph',
-      image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49',
-      alt: 'Luxury stainless steel chronograph wristwatch with a detailed dial',
-    },
-    {
-      title: 'Sport luxury watch',
-      image: 'https://images.unsplash.com/photo-1542496658-e33a6d0d50f6',
-      alt: 'Premium sport watch with a durable case and bold dial',
-    },
-    {
-      title: 'Classic luxury timepiece',
-      image: 'https://images.unsplash.com/photo-1434056886845-dac89ffe9b56',
-      alt: 'Classic luxury wristwatch with timeless styling',
-    },
-    {
-      title: 'Refined dress watch',
-      image: 'https://images.unsplash.com/photo-1524805444758-089113d48a6d',
-      alt: 'Refined dress watch with an elegant dial and leather strap',
-    },
-    {
-      title: 'Everyday luxury watch',
-      image: 'https://images.unsplash.com/photo-1524592094714-0f0654e20314',
-      alt: 'Versatile luxury wristwatch suited to everyday wear',
-    },
-    {
-      title: 'Minimal modern wristwatch',
-      image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30',
-      alt: 'Minimal modern wristwatch with a clean, easy-to-read dial',
-    },
-  ];
-
   const valueProps = [
     {
       title: 'Premium Quality Materials',
@@ -319,51 +286,6 @@ export default function Home({ setSelectedCategory }: HomeProps) {
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      )}
-      </DeferredSection>
-
-      <DeferredSection minHeight="50vh">
-      {() => (
-      <section className="border-b border-neutral-800 bg-neutral-950 py-16 sm:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto mb-10 max-w-3xl text-center">
-            <span className="text-[10px] font-bold uppercase tracking-[0.24em] text-amber-500 sm:text-xs">
-              PrestigeTime Collection
-            </span>
-            <h2 className="mt-3 font-serif text-3xl font-semibold tracking-wide text-white sm:text-4xl">
-              Luxury Watches for Men
-            </h2>
-            <p className="mt-3 text-sm text-neutral-400 sm:text-base">
-              Explore premium timepieces in classic, sport, and contemporary styles.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {luxuryWatchImages.map((item) => (
-              <figure
-                key={item.title}
-                className="group overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900"
-              >
-                <img
-                  src={getOptimizedUnsplashUrl(item.image, 700, 75)}
-                  srcSet={`${getOptimizedUnsplashUrl(item.image, 400, 75)} 400w, ${getOptimizedUnsplashUrl(item.image, 700, 75)} 700w`}
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  width={700}
-                  height={525}
-                  loading="lazy"
-                  decoding="async"
-                  alt={item.alt}
-                  className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  referrerPolicy="no-referrer"
-                />
-                <figcaption className="border-t border-neutral-800 px-4 py-3 text-sm font-medium text-neutral-200">
-                  {item.title}
-                </figcaption>
-              </figure>
             ))}
           </div>
         </div>
