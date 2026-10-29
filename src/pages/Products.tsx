@@ -16,24 +16,6 @@ function getOptimizedUnsplashUrl(url: string, width: number, quality = 75) {
   }
 }
 
-const WATCH_STYLE_IMAGES = [
-  {
-    title: 'Classic dress watches',
-    image: 'https://images.unsplash.com/photo-1524805444758-089113d48a6d',
-    alt: 'Classic wristwatch with a refined dial and leather strap',
-  },
-  {
-    title: 'Everyday sports watches',
-    image: 'https://images.unsplash.com/photo-1524592094714-0f0654e20314',
-    alt: 'Sport-style wristwatch designed for everyday wear',
-  },
-  {
-    title: 'Modern watch design',
-    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30',
-    alt: 'Minimal modern wristwatch with a clean, easy-to-read dial',
-  },
-];
-
 interface ProductsProps {
   onAddToCart: (product: Product) => void;
   selectedCategory: 'All' | 'Luxury' | 'Sports' | 'Smart' | 'Classic';
@@ -311,45 +293,6 @@ export default function Products({
           </div>
         )}
 
-      </section>
-
-      {/* Additional watch imagery for shoppers and image search discovery */}
-      <section className="border-b border-neutral-800 bg-neutral-900 py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto mb-10 max-w-3xl text-center">
-            <h2 className="font-serif text-3xl font-semibold tracking-wide text-white sm:text-4xl">
-              Explore Watches by Style
-            </h2>
-            <p className="mt-3 text-sm text-neutral-400 sm:text-base">
-              Browse timepieces for formal occasions, active days, and understated everyday wear.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {WATCH_STYLE_IMAGES.map((item) => (
-              <figure
-                key={item.title}
-                className="overflow-hidden rounded-xl border border-neutral-800 bg-neutral-950"
-              >
-                <img
-                  src={getOptimizedUnsplashUrl(item.image, 800)}
-                  srcSet={`${getOptimizedUnsplashUrl(item.image, 480)} 480w, ${getOptimizedUnsplashUrl(item.image, 800)} 800w`}
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  width={800}
-                  height={600}
-                  loading="lazy"
-                  decoding="async"
-                  alt={item.alt}
-                  className="aspect-[4/3] w-full object-cover"
-                  referrerPolicy="no-referrer"
-                />
-                <figcaption className="border-t border-neutral-800 px-4 py-3 text-sm font-medium text-neutral-200">
-                  {item.title}
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* 3. Product Features highlights catalog segment */}
