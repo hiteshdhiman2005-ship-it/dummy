@@ -197,39 +197,6 @@ export default function Home({ setSelectedCategory }: HomeProps) {
     }
   ];
 
-  const lifestyleGallery = [
-    {
-      title: 'Luxury watch for evening wear',
-      image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&q=80&w=900',
-      alt: 'Luxury men’s watch with leather strap for formal evening wear',
-    },
-    {
-      title: 'Sport watch for daily performance',
-      image: 'https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?auto=format&fit=crop&q=80&w=900',
-      alt: 'Men’s sports watch for active daily performance and travel',
-    },
-    {
-      title: 'Minimal timepiece for business style',
-      image: 'https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&q=80&w=900',
-      alt: 'Minimal luxury watch for men with a refined business look',
-    },
-    {
-      title: 'Classic automatic watch close-up',
-      image: 'https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?auto=format&fit=crop&q=80&w=900',
-      alt: 'Classic automatic watch close-up showing premium craftsmanship',
-    },
-    {
-      title: 'Luxury wristwear with metallic finish',
-      image: 'https://images.unsplash.com/photo-1490367532201-b9bc1dc483f6?auto=format&fit=crop&q=80&w=900',
-      alt: 'Luxury men’s wristwatch with metallic case and premium bracelet',
-    },
-    {
-      title: 'Luxury watch with refined modern styling',
-      image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&q=80&w=900',
-      alt: 'Luxury wristwatch for men with a refined modern design',
-    },
-  ];
-
   const valueProps = [
     {
       title: 'Premium Quality Materials',
@@ -318,47 +285,6 @@ export default function Home({ setSelectedCategory }: HomeProps) {
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      )}
-      </DeferredSection>
-
-      <DeferredSection minHeight="50vh">
-      {() => (
-      <section className="py-20 bg-neutral-900 border-b border-neutral-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-[10px] sm:text-xs uppercase tracking-[0.28em] text-amber-500 font-bold">Watch Story</span>
-            <h2 className="font-serif text-3xl sm:text-4xl font-semibold tracking-wide text-white mt-4 mb-3">
-              Crafted for every moment
-            </h2>
-            <div className="h-1 w-20 bg-amber-500 mx-auto rounded mb-4" />
-            <p className="text-neutral-400 text-sm sm:text-base">
-              Discover premium watch styling inspiration for formal occasions, performance days, and modern everyday wear.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {lifestyleGallery.map((item) => (
-              <figure key={item.title} className="group overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-950 shadow-xl">
-                <div className="relative aspect-[4/5] overflow-hidden">
-                  <img
-                    src={getOptimizedUnsplashUrl(item.image, 900, 78)}
-                    alt={item.alt}
-                    width={900}
-                    height={1125}
-                    loading="lazy"
-                    decoding="async"
-                    referrerPolicy="no-referrer"
-                    className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                  />
-                </div>
-                <figcaption className="border-t border-neutral-800 bg-neutral-950/80 px-4 py-4 text-sm font-medium text-neutral-200">
-                  {item.title}
-                </figcaption>
-              </figure>
             ))}
           </div>
         </div>
