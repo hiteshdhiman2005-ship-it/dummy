@@ -18,7 +18,7 @@ function getOptimizedUnsplashUrl(url: string, width: number, quality = 75) {
 export default function Contact() {
   useSEO({
     title: 'Contact Watch Customer Service | PrestigeTime Store',
-    description: "Are you searching for a reliable watch store near me or looking to buy watches online store with complete confidence? Contact watch customer service at PrestigeTime today.",
+    description: "Need help choosing a timepiece, placing an order, or caring for your watch? The PrestigeTime team is here to assist. Contact our watch customer service for questions about product details, availability, shipping, returns, warranties, or order updates. If you are searching for a watch store near you or planning to buy watches online, we can help you find the information you need before you decide. Tell us what you are looking for and include your order number when contacting us about an existing purchase. Our team aims to provide clear responses and practical guidance for every inquiry. You can reach us by email or phone using the details on this page, or send a message through the contact form. We welcome questions from collectors, first-time buyers, and anyone exploring luxury watches. We look forward to helping you shop with confidence and enjoy your PrestigeTime experience.",
     keywords: [
       'watch store near me',
       'buy watches online store',
