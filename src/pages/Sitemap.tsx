@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { Map, Compass, Watch, Landmark, BookOpen, Mail, Heart, ArrowRight } from 'lucide-react';
 import { useSEO } from '../hooks/useSEO';
+import { prefetchRoute } from '../routeLoaders';
 
 export default function Sitemap() {
   useSEO({
@@ -149,6 +150,8 @@ export default function Sitemap() {
                     </span>
                     <Link
                       to={page.path}
+                      onPointerEnter={() => prefetchRoute(page.path)}
+                      onFocus={() => prefetchRoute(page.path)}
                       className="text-amber-500 hover:text-amber-400 text-xs font-semibold flex items-center space-x-1 cursor-pointer"
                     >
                       <span>Visit</span>
@@ -192,6 +195,8 @@ export default function Sitemap() {
                       <div key={item.label} className="space-y-1.5 group">
                         <Link
                           to={item.target}
+                          onPointerEnter={() => prefetchRoute(item.target)}
+                          onFocus={() => prefetchRoute(item.target)}
                           className="text-sm font-semibold text-white hover:text-amber-400 transition-colors flex items-center space-x-1.5 cursor-pointer decoration-dotted underline-offset-4 group-hover:underline"
                         >
                           <span className="capitalize">{item.label}</span>

@@ -3,6 +3,7 @@ import { Shield, Sparkles, Award, Truck, ShieldCheck, Star, ArrowRight, Gem, Set
 import { useNavigate } from 'react-router-dom';
 import { useSEO } from '../hooks/useSEO';
 import { REVIEWS } from '../reviews';
+import { prefetchRoute } from '../routeLoaders';
 import HomeHero from './HomeHero';
 
 // Performance Optimizer: Dynamically resizes Unsplash image URLs for responsive screens
@@ -260,7 +261,7 @@ export default function Home({ setSelectedCategory }: HomeProps) {
   const handleCategoryClick = (category: 'Luxury' | 'Sports' | 'Smart' | 'Classic') => {
     setSelectedCategory(category);
     navigate('/products');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -288,6 +289,7 @@ export default function Home({ setSelectedCategory }: HomeProps) {
                 key={cat.slug}
                 className="group relative h-96 rounded-xl overflow-hidden cursor-pointer shadow-2xl border border-neutral-800/80 bg-neutral-900 flex flex-col justify-end"
                 onClick={() => handleCategoryClick(cat.slug)}
+                onPointerEnter={() => prefetchRoute('/products')}
               >
                 <div className="absolute inset-0">
                   <img
@@ -897,8 +899,10 @@ export default function Home({ setSelectedCategory }: HomeProps) {
               onClick={() => {
                 setSelectedCategory('All');
                 navigate('/products');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                window.scrollTo(0, 0);
               }}
+              onPointerEnter={() => prefetchRoute('/products')}
+              onFocus={() => prefetchRoute('/products')}
               className="px-10 py-4 bg-amber-500 hover:bg-amber-400 text-neutral-950 hover:text-neutral-900 text-xs font-bold tracking-widest rounded transition-all duration-300 cursor-pointer shadow-lg shadow-amber-500/10 inline-flex items-center space-x-2"
             >
               <span>EXPLORE WATCHES TODAY</span>

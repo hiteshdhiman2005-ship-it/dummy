@@ -1,5 +1,6 @@
 import { Sparkles, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { prefetchRoute } from '../routeLoaders';
 
 interface HomeHeroProps {
   setSelectedCategory: (category: 'All' | 'Luxury' | 'Sports' | 'Smart' | 'Classic') => void;
@@ -33,8 +34,10 @@ export default function HomeHero({ setSelectedCategory }: HomeHeroProps) {
               onClick={() => {
                 setSelectedCategory('All');
                 navigate('/products');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                window.scrollTo(0, 0);
               }}
+              onPointerEnter={() => prefetchRoute('/products')}
+              onFocus={() => prefetchRoute('/products')}
               className="w-full min-w-[190px] cursor-pointer rounded-sm bg-amber-500 px-5 py-4 text-sm font-bold tracking-[0.12em] text-neutral-950 shadow-lg shadow-amber-900/20 transition-all duration-300 hover:bg-amber-400 hover:shadow-amber-500/20 sm:w-fit sm:px-7 sm:tracking-[0.16em]"
             >
               SHOP COLLECTION
@@ -44,8 +47,10 @@ export default function HomeHero({ setSelectedCategory }: HomeHeroProps) {
               onClick={() => {
                 setSelectedCategory('Luxury');
                 navigate('/products');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                window.scrollTo(0, 0);
               }}
+              onPointerEnter={() => prefetchRoute('/products')}
+              onFocus={() => prefetchRoute('/products')}
               className="flex w-full min-w-[190px] cursor-pointer items-center justify-center space-x-2 rounded-sm border border-neutral-600 bg-white/[0.03] px-5 py-4 text-sm font-bold tracking-[0.12em] text-neutral-200 transition-all duration-300 hover:bg-white/[0.08] hover:text-white sm:w-fit sm:px-7 sm:tracking-[0.16em]"
             >
               <span>EXPLORE NEW ARRIVALS</span>

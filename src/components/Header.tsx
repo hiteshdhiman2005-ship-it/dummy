@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ShoppingBag, Menu, X, Heart, Sparkles } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import PrestigeLogo from './PrestigeLogo';
+import { prefetchRoute } from '../routeLoaders';
 
 interface HeaderProps {
   cartItemsCount: number;
@@ -31,7 +32,7 @@ export default function Header({
   const handleNavClick = (path: string) => {
     navigate(path);
     setIsOpen(false);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -51,8 +52,10 @@ export default function Header({
             to="/"
             onClick={() => {
               setIsOpen(false);
-              window.scrollTo({ top: 0, behavior: 'smooth' });
+              window.scrollTo(0, 0);
             }}
+            onPointerEnter={() => prefetchRoute('/')}
+            onFocus={() => prefetchRoute('/')}
             className="flex shrink-0 items-center focus:outline-none"
           >
             <PrestigeLogo size="sm" />
@@ -67,7 +70,9 @@ export default function Header({
                   id={`nav-desktop-${item.label.toLowerCase().replace(/\s/g, '-')}`}
                   key={item.path}
                   to={item.path}
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  onClick={() => window.scrollTo(0, 0)}
+                  onPointerEnter={() => prefetchRoute(item.path)}
+                  onFocus={() => prefetchRoute(item.path)}
                   className={`relative whitespace-nowrap px-1 py-2 text-[10px] sm:text-xs lg:text-sm tracking-[0.22em] uppercase transition-colors duration-200 cursor-pointer focus:outline-none ${
                     isActive ? 'text-amber-400 font-medium' : 'text-neutral-400 hover:text-white'
                   }`}
@@ -87,7 +92,9 @@ export default function Header({
             <Link
               id="header-wishlist-btn"
               to="/wishlist"
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              onClick={() => window.scrollTo(0, 0)}
+              onPointerEnter={() => prefetchRoute('/wishlist')}
+              onFocus={() => prefetchRoute('/wishlist')}
               className={`hidden h-11 w-11 items-center justify-center text-neutral-400 hover:text-amber-400 hover:bg-neutral-800/60 rounded-full transition-all relative cursor-pointer focus:outline-none min-[360px]:flex ${
                 currentPath === '/wishlist' ? 'text-amber-400' : ''
               }`}
@@ -149,6 +156,8 @@ export default function Header({
                   id={`nav-mobile-${item.label.toLowerCase().replace(/\s/g, '-')}`}
                   key={item.path}
                   onClick={() => handleNavClick(item.path)}
+                  onPointerEnter={() => prefetchRoute(item.path)}
+                  onFocus={() => prefetchRoute(item.path)}
                   className={`w-full text-left px-4 py-3 rounded-lg text-sm tracking-widest uppercase transition-all flex items-center justify-between ${
                     isActive
                       ? 'bg-amber-500/10 text-amber-400 font-medium'

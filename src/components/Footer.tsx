@@ -1,6 +1,7 @@
 import { Watch, Facebook, Instagram, Twitter, Linkedin, Youtube, Mail, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import PrestigeLogo from './PrestigeLogo';
+import { prefetchRoute } from '../routeLoaders';
 
 export default function Footer() {
   const socials = [
@@ -12,7 +13,7 @@ export default function Footer() {
   ];
 
   const handleScrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -46,6 +47,8 @@ export default function Footer() {
                   id="footer-nav-home"
                   to="/"
                   onClick={handleScrollToTop}
+                  onPointerEnter={() => prefetchRoute('/')}
+                  onFocus={() => prefetchRoute('/')}
                   className="hover:text-amber-400 hover:translate-x-1 transition-all duration-200 cursor-pointer text-left block text-neutral-300"
                 >
                   Home
@@ -56,6 +59,8 @@ export default function Footer() {
                   id="footer-nav-products"
                   to="/products"
                   onClick={handleScrollToTop}
+                  onPointerEnter={() => prefetchRoute('/products')}
+                  onFocus={() => prefetchRoute('/products')}
                   className="hover:text-amber-400 hover:translate-x-1 transition-all duration-200 cursor-pointer text-left block text-neutral-300"
                 >
                   Products
@@ -66,6 +71,8 @@ export default function Footer() {
                   id="footer-nav-about"
                   to="/about"
                   onClick={handleScrollToTop}
+                  onPointerEnter={() => prefetchRoute('/about')}
+                  onFocus={() => prefetchRoute('/about')}
                   className="hover:text-amber-400 hover:translate-x-1 transition-all duration-200 cursor-pointer text-left block text-neutral-300"
                 >
                   About Us
@@ -76,6 +83,8 @@ export default function Footer() {
                   id="footer-nav-wishlist"
                   to="/wishlist"
                   onClick={handleScrollToTop}
+                  onPointerEnter={() => prefetchRoute('/wishlist')}
+                  onFocus={() => prefetchRoute('/wishlist')}
                   className="hover:text-amber-400 hover:translate-x-1 transition-all duration-200 cursor-pointer text-left block text-neutral-300"
                 >
                   My Wishlist
@@ -86,6 +95,8 @@ export default function Footer() {
                   id="footer-nav-blog"
                   to="/blog"
                   onClick={handleScrollToTop}
+                  onPointerEnter={() => prefetchRoute('/blog')}
+                  onFocus={() => prefetchRoute('/blog')}
                   className="hover:text-amber-400 hover:translate-x-1 transition-all duration-200 cursor-pointer text-left block text-neutral-300"
                 >
                   Blog
@@ -96,6 +107,8 @@ export default function Footer() {
                   id="footer-nav-contact"
                   to="/contact"
                   onClick={handleScrollToTop}
+                  onPointerEnter={() => prefetchRoute('/contact')}
+                  onFocus={() => prefetchRoute('/contact')}
                   className="hover:text-amber-400 hover:translate-x-1 transition-all duration-200 cursor-pointer text-left block text-neutral-300"
                 >
                   Contact Us
@@ -106,6 +119,8 @@ export default function Footer() {
                   id="footer-nav-sitemap"
                   to="/sitemap"
                   onClick={handleScrollToTop}
+                  onPointerEnter={() => prefetchRoute('/sitemap')}
+                  onFocus={() => prefetchRoute('/sitemap')}
                   className="hover:text-amber-400 hover:translate-x-1 transition-all duration-200 cursor-pointer text-left block text-neutral-300"
                 >
                   Sitemap

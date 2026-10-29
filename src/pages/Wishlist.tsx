@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Heart, ShoppingCart, Eye, Trash2, Info, Check, Watch } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useSEO } from '../hooks/useSEO';
+import { prefetchRoute } from '../routeLoaders';
 import { Product } from '../types';
 
 // Performance Optimizer: Dynamically resizes Unsplash image URLs for responsive screens
@@ -234,6 +235,8 @@ export default function Wishlist({
                 <button
                   id="wishlist-explore-btn"
                   onClick={() => navigate('/products')}
+                  onPointerEnter={() => prefetchRoute('/products')}
+                  onFocus={() => prefetchRoute('/products')}
                   className="px-8 py-3.5 bg-amber-500 hover:bg-amber-400 text-neutral-950 text-xs font-bold tracking-widest uppercase rounded transition-colors cursor-pointer inline-flex items-center space-x-2 focus:outline-none"
                 >
                   <Watch className="h-4 w-4 mr-1 pb-0.5" />

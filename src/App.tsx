@@ -5,13 +5,15 @@ import { Routes, Route, Navigate, useLocation, useNavigate } from 'react-router-
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-const Home = lazy(() => import('./pages/Home'));
-const About = lazy(() => import('./pages/About'));
-const Products = lazy(() => import('./pages/Products'));
-const Blog = lazy(() => import('./pages/Blog'));
-const Contact = lazy(() => import('./pages/Contact'));
-const Wishlist = lazy(() => import('./pages/WishlistRoute'));
-const Sitemap = lazy(() => import('./pages/Sitemap'));
+import { routeLoaders } from './routeLoaders';
+
+const Home = lazy(routeLoaders.home);
+const About = lazy(routeLoaders.about);
+const Products = lazy(routeLoaders.products);
+const Blog = lazy(routeLoaders.blog);
+const Contact = lazy(routeLoaders.contact);
+const Wishlist = lazy(routeLoaders.wishlist);
+const Sitemap = lazy(routeLoaders.sitemap);
 
 import type { CartItem, Product } from './types';
 import HomeHero from './pages/HomeHero';
