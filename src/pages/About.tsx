@@ -15,7 +15,7 @@ function getOptimizedUnsplashUrl(url: string, width: number, quality = 75) {
 
 export default function About() {
   useSEO({
-    title: 'Authentic Luxury Watches & Heritage Watch Brand | About PrestigeTime',
+    title: 'About PrestigeTime | Authentic Luxury Watches',
     description: 'Read about our watch store and our long legacy as a classic heritage watch brand offering certified authentic luxury watches directly to collectors.',
     keywords: [
       'authentic luxury watches',
