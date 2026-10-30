@@ -34,7 +34,7 @@ export default function Products({
   // SEO configuration for the watch catalog
   useSEO({
     title: 'Shop Luxury, Sport & Classic Watches | PrestigeTime',
-    description: 'Explore luxury watches for men, premium automatic timepieces, sports watches, and classic designs selected for precision and lasting style.',
+    description: 'Explore luxury watches for men, premium automatic timepieces, sports watches, stop watches, and classic designs selected for precision and lasting style.',
     keywords: [
       'luxury watches for men',
       'premium watches for men',
@@ -42,6 +42,7 @@ export default function Products({
       'sports watches',
       'smart watches',
       'classic watches',
+      'stop watch',
       'buy watches online'
     ],
   });
@@ -333,7 +334,7 @@ export default function Products({
               Premium Horological Brand Selection
             </span>
             <p className="text-neutral-300 text-xs sm:text-sm font-light leading-relaxed">
-              Discover a curated boutique collection of premium watches for men, from refined dress pieces and everyday luxury models to rugged sports designs and statement-making timepieces. Our selection is built for collectors, professionals, and style-conscious buyers looking for elegant craftsmanship, dependable performance, and timeless appeal across iconic watch brands.
+              Discover a curated boutique collection of premium watches for men, from refined dress pieces and everyday luxury models to rugged sports designs, stop watches, and statement-making timepieces. Our selection is built for collectors, professionals, and style-conscious buyers looking for elegant craftsmanship, dependable performance, and timeless appeal across iconic watch brands.
             </p>
           </div>
 

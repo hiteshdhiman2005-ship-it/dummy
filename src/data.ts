@@ -160,6 +160,26 @@ export const PRODUCTS: Product[] = [
     glassType: 'Scratch-Resistant Mineral Crystal',
     strapMaterial: 'Textured Rubber',
     featured: false,
+  },
+  {
+    id: '10',
+    name: 'Prestige Precision Stop Watch',
+    price: 249,
+    description: 'A dependable sports stop watch with clear elapsed-time tracking for training, competition, and everyday timing.',
+    category: 'Sports',
+    image: 'https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800',
+    features: [
+      'Dedicated start, stop, and reset controls',
+      'Precision quartz timing with elapsed-time tracking',
+      'High-contrast dial for quick, easy reading',
+      'Durable stainless steel case and comfortable sport strap',
+      'Water resistant to 50m (5 ATM)'
+    ],
+    movement: 'Precision Quartz Stopwatch',
+    waterResistance: '50m (5 ATM)',
+    glassType: 'Scratch-Resistant Mineral Crystal',
+    strapMaterial: 'Textured Rubber',
+    featured: false,
   }
 ];
 
