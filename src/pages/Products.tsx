@@ -43,7 +43,17 @@ export default function Products({
       'smart watches',
       'classic watches',
       'stop watch',
-      'buy watches online'
+      'buy watches online',
+      '20 ATM water resistant men\'s sports watch',
+      'automatic chronograph with double-domed sapphire crystal',
+      '316L solid stainless steel watch for men',
+      'men\'s dress watch with Italian leather strap',
+      'shock resistant sports watch under $500',
+      'premium automatic watches under $600',
+      'dependable sports stop watch under $300',
+      'durable chronograph for weekend adventures',
+      'elegant dress watches for corporate professionals',
+      'heavy duty sports watches for active lifestyles'
     ],
   });
 
