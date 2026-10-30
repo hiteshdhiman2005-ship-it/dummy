@@ -167,7 +167,7 @@ export const PRODUCTS: Product[] = [
     price: 249,
     description: 'A dependable sports stop watch with clear elapsed-time tracking for training, competition, and everyday timing.',
     category: 'Sports',
-    image: 'https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.pexels.com/photos/5563404/pexels-photo-5563404.jpeg?auto=compress&cs=tinysrgb&w=800',
     features: [
       'Dedicated start, stop, and reset controls',
       'Precision quartz timing with elapsed-time tracking',
