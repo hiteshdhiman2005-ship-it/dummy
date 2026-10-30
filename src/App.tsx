@@ -5,7 +5,7 @@ import { Routes, Route, Navigate, useLocation, useNavigate } from 'react-router-
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-import { routeLoaders } from './routeLoaders';
+import { prefetchRoutes, routeLoaders } from './routeLoaders';
 
 const Home = lazy(routeLoaders.home);
 const About = lazy(routeLoaders.about);
@@ -26,6 +26,11 @@ export default function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isCheckoutSuccess, setIsCheckoutSuccess] = useState(false);
   const [checkoutCode, setCheckoutCode] = useState('');
+
+  useEffect(() => {
+    const prefetchTimeout = window.setTimeout(prefetchRoutes, 1200);
+    return () => window.clearTimeout(prefetchTimeout);
+  }, []);
 
   // Wishlist state with localStorage persistence
   const [wishlist, setWishlist] = useState<string[]>(() => {
@@ -129,7 +134,12 @@ export default function App() {
             location.pathname === '/' ? (
               <HomeHero setSelectedCategory={setSelectedCategory} />
             ) : (
-              <div className="min-h-[60vh]" aria-busy="true" />
+              <div className="flex min-h-[60vh] items-center justify-center" aria-busy="true" aria-live="polite">
+                <div className="flex items-center gap-3 text-sm text-neutral-300">
+                  <span className="h-5 w-5 animate-spin rounded-full border-2 border-neutral-600 border-t-amber-400" />
+                  Loading page...
+                </div>
+              </div>
             )
           }
         >

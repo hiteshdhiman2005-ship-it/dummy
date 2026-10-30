@@ -27,3 +27,13 @@ export function prefetchRoute(path: string) {
     });
   }
 }
+
+export function prefetchRoutes() {
+  for (const [path, loadRoute] of Object.entries(routePrefetchers)) {
+    if (path !== '/services') {
+      void loadRoute().catch((error: unknown) => {
+        console.error(`Failed to preload route "${path}"`, error);
+      });
+    }
+  }
+}
